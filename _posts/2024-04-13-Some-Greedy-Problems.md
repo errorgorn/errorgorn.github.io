@@ -1,6 +1,6 @@
 ---
-description - Problemset for a Lecture given in May 2022
-tags - Misc
+description: Problemset for a Lecture given in May 2022
+tags: Misc
 ---
 
 ## Some Greedy Problems
