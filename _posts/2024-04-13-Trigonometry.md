@@ -3,6 +3,7 @@ tags: notes
 ---
 
 ## Trignometry
+### Trigonometry
 
 <center>
   <img src="https://cdn.discordapp.com/attachments/752406106009239585/1228659294308929556/image.png?ex=662cd923&is=661a6423&hm=fc74a127b061b50aa933efaa775a77f49828571baae53b055b716b9663d5d677&">
@@ -38,8 +39,8 @@ Along with those three functions, we also have $\csc(\theta) = \frac{1}{\sin(\th
 
 $\frac{\sin(\alpha)}{A} = \frac{\sin(b)}{B}$
 
-Proof:
-Drop the red perpendicular line. The length of the perpendicular line is $A \sin(\beta)$ or $B \sin (\alpha)$. 
+Proof:  
+Drop the red perpendicular line. The length of the perpendicular line is $A \sin(\beta)$ or $B \sin (\alpha)$.   
 Since we have $A \sin(\beta)=B \sin (\alpha)$, $\frac{\sin(\alpha)}{A} = \frac{\sin(b)}{B}$ follows.
 
 #### Addition of Trigonometric Functions
@@ -56,19 +57,16 @@ In the above diagram, we have $\frac{A+B}{\sin(\alpha+\beta)} = \frac{L}{\sin(\t
 
 $\frac{A+B}{\sin(\alpha+\beta)} = \frac{L}{\sin(\theta)} = \frac{A}{\sin(\alpha) \sin(\theta)} = \frac{A}{\sin(\alpha) \sin(\frac \tau4 - \beta)} = \frac{A}{\sin(\alpha) \cos(\beta)}$
 
-Therefore, $(A + B) \cdot (\sin(\alpha) \cos(\beta)) = A \cdot (\sin(\alpha + \beta))$
-
-By symmetry, we also have $(A + B) \cdot (\sin(\beta) \cos(\alpha)) = B \cdot (\sin(\alpha + \beta))$
-
-Adding both equations, we obtain  $(A + B) \cdot (\sin(\alpha) \cos(\beta) + \sin(\beta) \cos(\alpha)) = (A+B) \cdot (\sin(\alpha + \beta))$
-
+Therefore, $(A + B) \cdot (\sin(\alpha) \cos(\beta)) = A \cdot (\sin(\alpha + \beta))$  
+By symmetry, we also have $(A + B) \cdot (\sin(\beta) \cos(\alpha)) = B \cdot (\sin(\alpha + \beta))$  
+Adding both equations, we obtain  $(A + B) \cdot (\sin(\alpha) \cos(\beta) + \sin(\beta) \cos(\alpha)) = (A+B) \cdot (\sin(\alpha + \beta))$  
 Therefore, $\sin(\alpha + \beta) = \sin(\alpha) \cos(\beta) +  \cos(\alpha) \sin(\beta)$
 
 
 
 Corollary: $\sin(\alpha \pm \beta) = \sin(\alpha) \cos(\beta) \pm \cos(\alpha) \sin(\beta)$
 
-Corollary: $\cos(\alpha \pm \beta) = \cos(\alpha) \cos(\beta) \mp \sin(\alpha) \sin(\beta)$
+Corollary: $\cos(\alpha \pm \beta) = \cos(\alpha) \cos(\beta) \mp \sin(\alpha) \sin(\beta)$  
 Proof: $\cos(\alpha \pm \beta) = \sin((\alpha + \frac \tau 4) \pm \beta) = \sin(\alpha + \frac \tau 4) \cos(\beta) \pm \cos(\alpha + \frac \tau 4) \sin(\beta) = \cos(\alpha) \cos(\beta) \mp \sin(\alpha) \cos(\beta)$
 
 Corollary: $\sin(2 \theta) = 2 \sin(\theta) \cos(\theta)$ and $\cos(2 \theta) = \cos^2(\theta) - \sin^2(\theta) = 2 \cos^2(\theta) - 1 = 1 - \sin^2(\theta)$
@@ -187,8 +185,7 @@ We can verify that $\cosh^2(x) - \sinh^2(x) = (\frac{e^x + e^{-x}}{2})^2 - (\fra
 
 #### Addition of Hyperbolic Functions
 
-$\sinh(x \pm y) = \sinh(x) \cosh(y) \pm \cosh(x) \sinh(y)$
-
+$\sinh(x \pm y) = \sinh(x) \cosh(y) \pm \cosh(x) \sinh(y)$  
 $\cosh(x \pm y) = \cosh(x) \cosh(y) \pm \sinh(x) \sinh(y)$
 
 They should be similar to the normal trigonometric function if one inspects how they are written in terms of $e^{x}$ or $e^{ix}$ respectively. The only difference are in the signs.
@@ -201,27 +198,27 @@ Define $\text{arcsinh}: \mathbb{R} \to \mathbb{R}$,  $\text{arcsinh}: [1,\infty)
 
 We can find explicit formulas for these three functions.
 
-Let $y = \text{arcsinh}(x)$, then $\sinh (y) = x$
-$e^y = \sinh (y) + \cosh (y) = \sinh (y) + \sqrt{1 + \sinh^2 (y)} = x+\sqrt{1+x^2}$
+Let $y = \text{arcsinh}(x)$, then $\sinh (y) = x$  
+$e^y = \sinh (y) + \cosh (y) = \sinh (y) + \sqrt{1 + \sinh^2 (y)} = x+\sqrt{1+x^2}$  
 $\text{arcsinh}(x) = \ln(x + \sqrt{1+x^2})$
 
-Let $y = \text{arccosh}(x)$, then $\cosh (y) = x$
-$e^y = \sinh (y) + \cosh (y) = \sqrt{\cosh^2 (y) -1} + \cosh(y) =\sqrt{x^2-1} + x$
+Let $y = \text{arccosh}(x)$, then $\cosh (y) = x$  
+$e^y = \sinh (y) + \cosh (y) = \sqrt{\cosh^2 (y) -1} + \cosh(y) =\sqrt{x^2-1} + x$  
 $\text{arcsinh}(x) = \ln(x + \sqrt{x^2-1})$
 
-Let $y = \text{arctanh}(x)$, then $\tanh (y) = x$
-$1 - \tanh(y) = 1 - \frac{e^y - e^{-y}}{e^y + e^{-y}} = \frac{-2e^{-y}}{e^y + e^{-y}} = \frac{2}{e^{2y} + 1}$
+Let $y = \text{arctanh}(x)$, then $\tanh (y) = x$  
+$1 - \tanh(y) = 1 - \frac{e^y - e^{-y}}{e^y + e^{-y}} = \frac{-2e^{-y}}{e^y + e^{-y}} = \frac{2}{e^{2y} + 1}$  
 $e^{2y} = \frac{2}{1-x} - 1 = \frac{1+x}{1-x}$
 $\text{arctanh}(x) = \frac{1}{2} \ln(\frac{1+x}{1-x})$
 
 ### Differentiation of Hyperbolic Functions
 
-$\frac{d}{dx} \sinh(x) = \frac{d}{dx} \frac{e^x - e^{-x}}{2} = \frac{e^x + e^{-x}}{2} = \cosh(x)$
-$\frac{d}{dx} \cosh(x) = \frac{d}{dx} \frac{e^x + e^{-x}}{2} = \frac{e^x - e^{-x}}{2} = \sinh(x)$
+$\frac{d}{dx} \sinh(x) = \frac{d}{dx} \frac{e^x - e^{-x}}{2} = \frac{e^x + e^{-x}}{2} = \cosh(x)$  
+$\frac{d}{dx} \cosh(x) = \frac{d}{dx} \frac{e^x + e^{-x}}{2} = \frac{e^x - e^{-x}}{2} = \sinh(x)$  
 $\frac{d}{dx} \tanh(x) = \frac{d}{dx} \frac{\sinh(x)}{\cosh(x)} = \frac{\cosh^2(x)-\sinh^2(x)}{\cosh^2(x)} = \frac{1}{\cosh^2(x)}$
 
-$\frac{d}{dx} \text{arcsinh}(x) = \frac{1}{\sinh'(\text{arcsinh(x)})} = \frac{1}{\cosh(\text{arcsinh(x)})} = \frac{1}{\sqrt{x^2+1}}$, since $\cosh(\theta) = \sqrt{\sinh^2(\theta)+1}$
-$\frac{d}{dx} \text{arccosh}(x) = \frac{1}{\cosh'(\text{arccosh(x)})} = \frac{1}{\sinh(\text{arccosh(x)})} = \frac{1}{\sqrt{x^2-1}}$, since $\sinh(\theta) = \sqrt{\cosh^2(\theta)-1}$
+$\frac{d}{dx} \text{arcsinh}(x) = \frac{1}{\sinh'(\text{arcsinh(x)})} = \frac{1}{\cosh(\text{arcsinh(x)})} = \frac{1}{\sqrt{x^2+1}}$, since $\cosh(\theta) = \sqrt{\sinh^2(\theta)+1}$  
+$\frac{d}{dx} \text{arccosh}(x) = \frac{1}{\cosh'(\text{arccosh(x)})} = \frac{1}{\sinh(\text{arccosh(x)})} = \frac{1}{\sqrt{x^2-1}}$, since $\sinh(\theta) = \sqrt{\cosh^2(\theta)-1}$  
 $\frac{d}{dx} \text{arctanh}(x) = \frac{1}{\tanh'(\text{arctanh(x)})} = \cosh^2(\text{arctanh(x)})= \frac{1}{1-x^2}$, since $\cosh(\theta) = \frac{1}{\sqrt{1 - \tanh^2(\theta)}}$
 
 ### Universal Trigonometric Substitution
@@ -230,8 +227,8 @@ Also known as Weierstrass substitution.
 
 If we are integrating a function $f(\theta)$ that can be written in terms of $\sin(\theta)$ and $\cos(\theta)$, we can just apply the substitution $t = \tan(\frac{\theta}{2})$.
 
-$\frac{d \theta}{d t} = \frac{d}{d t} 2 \arctan(t) = \frac{2}{1+t^2}$
-$\sin(\theta) = 2 \sin(\frac \theta 2) \cos(\frac \theta 2) = \frac{2 \frac{\sin(\frac \theta 2)}{\cos(\frac \theta 2)} \frac{\cos(\frac \theta 2)}{\cos(\frac \theta 2)}}{\frac{\cos^2(\frac \theta 2)}{\cos^2(\frac \theta 2)} + \frac{\sin^2(\frac \theta 2)}{\cos^2(\frac \theta 2)}} = \frac{2t}{1+t^2}$ 
+$\frac{d \theta}{d t} = \frac{d}{d t} 2 \arctan(t) = \frac{2}{1+t^2}$  
+$\sin(\theta) = 2 \sin(\frac \theta 2) \cos(\frac \theta 2) = \frac{2 \frac{\sin(\frac \theta 2)}{\cos(\frac \theta 2)} \frac{\cos(\frac \theta 2)}{\cos(\frac \theta 2)}}{\frac{\cos^2(\frac \theta 2)}{\cos^2(\frac \theta 2)} + \frac{\sin^2(\frac \theta 2)}{\cos^2(\frac \theta 2)}} = \frac{2t}{1+t^2}$  
 
 $\cos(\theta) = \cos^2(\frac \theta 2) - \sin^2(\frac \theta 2) = \frac{\frac{\cos^2(\frac \theta 2)}{\cos^2(\frac \theta 2)} - \frac{\sin^2(\frac \theta 2)}{\cos^2(\frac \theta 2)}}{\frac{\cos^2(\frac \theta 2)}{\cos^2(\frac \theta 2)} + \frac{\sin^2(\frac \theta 2)}{\cos^2(\frac \theta 2)}} = \frac{1-t^2}{1+t^2}$ 
 
