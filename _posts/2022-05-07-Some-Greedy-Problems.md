@@ -5,7 +5,7 @@ tags: misc
 
 ## Some Greedy Problems
 
-This problem set was created back in May of 2022 for a lecture on Greedy problems. I went super overboard with difficulty. Posting here for fun.
+This problem set was for a lecture on Greedy problems I gave in NUSH. I went super overboard with difficulty. Posting here for fun.
 
 ### Easy Problems
 
