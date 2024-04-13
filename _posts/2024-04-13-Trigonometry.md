@@ -208,7 +208,7 @@ $\text{arcsinh}(x) = \ln(x + \sqrt{x^2-1})$
 
 Let $y = \text{arctanh}(x)$, then $\tanh (y) = x$  
 $1 - \tanh(y) = 1 - \frac{e^y - e^{-y}}{e^y + e^{-y}} = \frac{-2e^{-y}}{e^y + e^{-y}} = \frac{2}{e^{2y} + 1}$  
-$e^{2y} = \frac{2}{1-x} - 1 = \frac{1+x}{1-x}$
+$e^{2y} = \frac{2}{1-x} - 1 = \frac{1+x}{1-x}$  
 $\text{arctanh}(x) = \frac{1}{2} \ln(\frac{1+x}{1-x})$
 
 ### Differentiation of Hyperbolic Functions
