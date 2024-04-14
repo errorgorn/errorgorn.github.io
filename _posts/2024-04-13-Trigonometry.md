@@ -74,9 +74,9 @@ Corollary: $\sin(2 \theta) = 2 \sin(\theta) \cos(\theta)$ and $\cos(2 \theta) = 
 
 #### Product to Sum
 
-$2\sin(\alpha) \cos(\beta) =  \sin(\alpha + \beta) + \sin(\alpha - \beta)$
-$2\cos(\alpha) \sin(\beta) =  \sin(\alpha + \beta) - \sin(\alpha - \beta)$
-$2\cos(\alpha) \cos(\beta) =  \cos(\alpha + \beta) + \cos(\alpha - \beta)$
+$2\sin(\alpha) \cos(\beta) =  \sin(\alpha + \beta) + \sin(\alpha - \beta)$  
+$2\cos(\alpha) \sin(\beta) =  \sin(\alpha + \beta) - \sin(\alpha - \beta)$  
+$2\cos(\alpha) \cos(\beta) =  \cos(\alpha + \beta) + \cos(\alpha - \beta)$  
 $2\sin(\alpha) \sin(\beta) =  -\cos(\alpha + \beta) + \cos(\alpha - \beta)$
 
 Proofs: expand right side
@@ -241,3 +241,4 @@ $$\begin{align}\int \frac{1}{5+4\cos \theta} \, d \theta &= \int \frac{\frac{2}{
 $$\begin{align}\int \sec^6(\theta) \, d \theta &= \int \frac{1}{(\cos^2(\theta))^3} \, d \theta \\ &=  \int \frac{1}{(\frac{\cos(2 \theta)+1}{2})^3} \, d \theta \\ &= \int \frac{\frac{1}{1+t^2}}{(\frac{1}{1+t^2})^3} \, d t, \quad t=\tan(\theta) \\ &= \int 1+2t^2 + t^4 \, d t \\ &= t + \frac{2}{3}t^3 + \frac{1}{5}t^5 \\ &= \tan(\theta) + \frac{2}{3}\tan^3(\theta) + \frac{1}{5}\tan^5(\theta)\end{align}$$
 
 $$\begin{align} \int \sec(3 \theta) \sec(\theta) \, d \theta &= \int \frac{2}{\cos(3\theta + \theta) + \cos(3\theta-\theta)} \, d \theta \\ &= \int \frac{2}{\cos(4 \theta) + \cos(2 \theta)} \, d \theta \\ &=  \int \frac{2}{1 + \cos(2 \theta) - 2 \sin^2(2 \theta)} \, d \theta \\ &= \int \frac{\frac{2}{1+t^2}}{(\frac{2}{1+t^2}) -2 (\frac{2t}{1+t^2})^2} \, d t, \quad t=\tan(\theta) \\ &= \int\frac{1+t^2}{1-3t^2} \, dt \\ &= \int - \frac{1}{3} + \frac{4}{3} \cdot \frac{1}{1-3t^2} \, dt\\ &= -\frac{1}{3}t + \frac{2}{3 \sqrt 3}\cdot \ln \Bigg \lvert \frac{\sqrt 3 + 3t}{\sqrt 3 - 3t} \Bigg \rvert \\ &= -\frac{1}{3} \tan \theta + \frac{2}{3 \sqrt 3}\cdot \ln \Bigg \lvert \frac{\sqrt 3 + 3\tan \theta}{\sqrt 3 - 3\tan \theta} \Bigg\rvert\end{align}$$
+
