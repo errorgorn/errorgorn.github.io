@@ -119,7 +119,7 @@ for (int bit=0;bit<n;bit++){
 
 Just for knowledge, $\zeta$ is invertible and we define $\mu$ as its inverse, so that $\mu(\zeta(A)) = \mu(\zeta(A)) = A$.
 
-or-convolution of $A$ and $B$ is defined as $C_i = \sum\limits_{j \lor k = i} A_j \cdot B_k$. It is given by $C = \mu(\zeta(A) \cdot  \zeta(B))$.
+or-convolution of $A$ and $B$ is defined as $C_i = \sum\limits_{j \lor k = i} A_j \cdot B_k$. It is given by $C = \mu(\zeta(A) \times  \zeta(B))$, here $\times$ is element-wise multiplication. You can submit this at <https://judge.yosupo.jp/problem/bitwise_and_convolution>.
 
 ### Sum over Divisors
 
@@ -150,3 +150,4 @@ $\mu(s) = \frac{1}{\zeta(s)} = \prod\limits_{p} \frac{1}{1+p^{-s}+p^{-2s}+ \ldot
 
 So $[\frac{1}{n^s}] \mu(s)$ gives us the mobius function. This can also be viewed as PIE on prime factors.
 
+Also, the analogue of or-convolution above is the LCM convolution. The LCM convolution of $A$ and $B$ is defined as $C_i = \sum\limits_{\text{lcm}(j,k) = i} A_j \cdot B_k$. It is given by $\mathcal{C}(s) = \mu(s) (\zeta(s) \mathcal A(s) \times  \zeta(s) \mathcal B(s))$, here $\times$ is element wise multiplication. You can submit this at <https://judge.yosupo.jp/problem/lcm_convolution>.
