@@ -79,8 +79,7 @@ Therefore, if we compress the elements of $r$ into the important categories abov
 
 Implementation wise, you don't need to explicitly generate the above categories but just generate the ranges of $r$ for each element of $l$ and then "discretize" those ranges. The above proof is only showing that when you discretize those ranges, you will have need to update $O(1)$ number of ranges.
 
-<details>
-<summary> Code </summary>
+<details> <summary> Code </summary> <p>
 
 ```c++
 #include <bits/stdc++.h>
@@ -293,7 +292,7 @@ int main(){
 }
 ```
 
-</details>
+</p></details>
 
 
 ### Solution 2
