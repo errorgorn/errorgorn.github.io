@@ -81,6 +81,7 @@ Implementation wise, you don't need to explicitly generate the above categories 
 
 <details>
 <summary> Code </summary>
+
 ```c++
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -291,6 +292,7 @@ int main(){
 	rep(x,0,q) cout<<ans[x]<<endl;
 }
 ```
+
 </details>
 
 
