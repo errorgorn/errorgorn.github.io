@@ -119,7 +119,7 @@ for (int bit=0;bit<n;bit++){
 
 Just for knowledge, $\zeta$ is invertible and we define $\mu$ as its inverse, so that $\mu(\zeta(A)) = \mu(\zeta(A)) = A$.
 
-or-convolution of $A$ and $B$ is defined as $C_i = \sum\limits_{j \or k = i} A_j \cdot B_k$. It is given by $C = \mu(\zeta(A) \cdot  \zeta(B))$.
+or-convolution of $A$ and $B$ is defined as $C_i = \sum\limits_{j \lor k = i} A_j \cdot B_k$. It is given by $C = \mu(\zeta(A) \cdot  \zeta(B))$.
 
 ### Sum over Divisors
 
