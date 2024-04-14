@@ -2,7 +2,7 @@
 tags: CP
 ---
 
-## Sandwich
+## Sandwich Editorial
 
 <https://codebreaker.xyz/problem/sandwich>
 
@@ -24,8 +24,8 @@ Furthermore, if $A_{\text{nxt}(l)} < A_r$, note the strict inequality, then $\te
 
 So we can quickly solve the above problem by maintaining a stack of $S_r$ of $(\text{value},\text{occurance})$:
 
-1. add the number of occurrences of values $\leq A_r$ in $S_r$ to our answer
-2. then delete all values $< A_r$ in $S_r$
+1. delete all $\text{value} < A_r$ in $S_r$ and add $\text{occurance}$ to answer
+2. if $\text{value} = A_r$ is in $S_r$, add $\text{occurance}$ to answer
 3. add a single occurrence of $S_r$ to the stack
 4. $S_r$ has been changed to $S_{r+1}$ now
 
@@ -80,6 +80,7 @@ Therefore, if we compress the elements of $r$ into the important categories abov
 Implementation wise, you don't need to explicitly generate the above categories but just generate the ranges of $r$ for each element of $l$ and then "discretize" those ranges. The above proof is only showing that when you discretize those ranges, you will have need to update $O(1)$ number of ranges.
 
 <details><summary markdown="span">Code</summary>
+
 ```c++
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -290,7 +291,9 @@ int main(){
 	rep(x,0,q) cout<<ans[x]<<endl;
 }
 ```
+
 </details>
+
 
 ### Solution 2
 
@@ -298,24 +301,236 @@ This solution was found by Yan Hao during testing. It is asymptotically faster a
 
 The main idea is to also handle the ranges by cases, but we split by the maximum element in the range.
 
-Indeed, suppose $m \in [x_i,y_i]$ is the index of the maximum element in the range $[x_i,y_i]$, if there are multiple maximum elements, either choose the last or the first one, choosing a middle one does not work. WLOG, we chose the first maximum element.
+Indeed, suppose $m_1$ and $m_2$ is the indices of the first and last maximum elements in the range $[x_i,y_i]$, possibly $m_1=m_2$.
 
-There are no sandwiches that satisfy $x_i \leq l < m < r \leq y_i$. Otherwise, this implies that $A_m < A_l$, which contradicts how we selected $m$.
+There are no sandwiches that satisfy $x_i \leq l < m_1 < r \leq y_i$ and $x_i \leq l < m_2 < r \leq y_i$. Otherwise, this implies that $A_{m_1} < A_l$ and $A_{m_2} < r$ respectively, which contradicts how we selected $m_1$ and $m_2$.
 
-Note that we can find the range maximum in $\langle O(n),O(1) \rangle$ using 4 Russians or something.
+Note that we can find $m_1$ and $m_2$ in $\langle O(n),O(1) \rangle$ using 4 Russians or something.
 
 Let us go back to the solution of solving the problem for all queries with $(x_i,y_i) = (1,i)$. Instead of only tracking the answer, we need to track the answer for all elements in $S_r$ when we are sweeping on $r$.
 
 In the original version, our algorithm is:
 
-1. add the number of occurrences of values $\leq A_r$ in $S_r$ to our answer
-2. then delete all values $< A_r$ in $S_r$
+1. delete all $\text{value} < A_r$ in $S_r$ and add $\text{occurance}$ to answer
+2. if $\text{value} = A_r$ is in $S_r$, add $\text{occurance}$ to answer
 3. add a single occurrence of $S_r$ to the stack
 4. $S_r$ has been changed to $S_{r+1}$ now
 
-In the new version, our algorithm needs to be:
+In the new version, we will store $ans_l$ to denote the answer if $(x_i,y_i) = (l,r)$ when sweeping on $l$. $ans_l$ will only maintained if it is a **strict** suffix maxima. Our algorithm will become:
 
-1. add the number of occurrences of values $\leq A_r$ in $S_r$ to our answer
-2. then delete all values $< A_r$ in $S_r$
-3. add a single occurrence of $S_r$ to the stack
+1. delete all $\text{value} < A_r$ in $S_r$ and add $\text{occurance}$ to all $ans_l$
+2. if $\text{value} = A_r$ is in $S_r$, add $\text{occurance}$ to all $ans_l$ (this is why we can only maintain for strict suffix maxima, or this will be $O(n^2)$)
+3. add a single occurrence of $S_r$ to the stack, and set $ans_r := 0$
 4. $S_r$ has been changed to $S_{r+1}$ now
+
+The range adds above are easy to handle since they are global range adds.
+
+The only case we need to handle now is those sandwiches between $m_1$ and $m_2$. But those can be easily handled by modifying the above line sweep a bit.
+
+The below code actually runs in $O(n \alpha (n))$ cause I didn't use $\langle O(n),O(1) \rangle$ RMQ.
+
+<details><summary markdown="span">Code</summary>
+
+```c++
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+#include <ext/rope>
+using namespace std;
+using namespace __gnu_pbds;
+using namespace __gnu_cxx;
+#define ll long long
+#define ii pair<int,int>
+#define iii pair<ii,int>
+#define fi first
+#define se second
+#define endl '\n'
+#define debug(x) cout << #x << ": " << x << endl
+
+#define pub push_back
+#define pob pop_back
+#define puf push_front
+#define pof pop_front
+#define lb lower_bound
+#define ub upper_bound
+
+#define rep(x,start,end) for(auto x=(start)-((start)>(end));x!=(end)-((start)>(end));((start)<(end)?x++:x--))
+#define all(x) (x).begin(),(x).end()
+#define sz(x) (int)(x).size()
+
+#define indexed_set tree<ll,null_type,less<ll>,rb_tree_tag,tree_order_statistics_node_update>
+//change less to less_equal for non distinct pbds, but erase will bug
+
+mt19937 rng(chrono::system_clock::now().time_since_epoch().count());
+
+struct UFDS{
+	int p[2500005];
+	int r[2500005];
+	int v[2500005];
+	
+	void reset(){
+		rep(x,0,2500005){
+			p[x]=v[x]=x;
+			r[x]=0;
+		}
+	}
+	
+	int par(int i){
+		if (i==p[i]) return i;
+		else return p[i]=par(p[i]);
+	}
+	
+	void unions(int i,int j,int k){
+		i=par(i),j=par(j);
+		if (r[i]>r[j]) swap(i,j);
+		p[i]=j;
+		if (r[i]==r[j]) r[j]++;
+		v[j]=k;
+	}
+} ufds;
+
+inline void read(int &x){
+	x=0;
+	char ch=getchar_unlocked();
+	while (ch&16){
+		x=x*10+(ch&15);
+		ch=getchar_unlocked();
+	}
+}
+
+int n,q;
+int arr[2500005];
+vector<int> pos[2500005];
+
+int nxtr[2500005];
+ll valr[2500005];
+
+int nxtl[2500005];
+ll vall[2500005];
+
+int pos_grp[2500005];
+ll pref[2500005];
+
+ii qu[2500005];
+ii qu2[2500005];
+vector<iii> Q;
+ll ans[2500005];
+
+int main(){
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	cin.exceptions(ios::badbit | ios::failbit);
+	
+	read(n),read(q);
+	rep(x,1,n+1) read(arr[x]);
+	arr[0]=arr[n+1]=1e9+100;
+	
+	rep(x,0,q){
+		read(qu[x].fi),read(qu[x].se);
+		Q.pub({qu[x],x});
+	}
+	
+	sort(all(Q),[](iii i,iii j){
+		return i.fi.se<j.fi.se;
+	});
+	
+	int idx=0;
+	vector<int> stk;
+	ufds.reset();
+	
+	rep(x,1,n+2){
+		valr[x]=1;
+		while (!stk.empty() && arr[stk.back()]<arr[x]){
+			int temp=stk.back(); stk.pob();
+			
+			ll cnt=1;
+			
+			rep(y,0,sz(pos[temp])-1){
+				pref[pos[temp][y+1]]=valr[pos[temp][y]]+pref[pos[temp][y]];
+			}
+			
+			reverse(all(pos[temp]));
+			rep(y,0,sz(pos[temp])){
+				nxtr[pos[temp][y]]=x;
+				ufds.unions(pos[temp][y],x,x);
+				
+				valr[pos[temp][y]]+=cnt;
+				cnt=valr[pos[temp][y]]+y+2;
+			}
+			if (!stk.empty()) valr[stk.back()]+=cnt-1;
+		}
+		if (!stk.empty() && arr[stk.back()]==arr[x]){
+			swap(pos[stk.back()],pos[x]);
+			stk.back()=x;
+		}
+		else{
+			stk.pub(x);
+		}
+		pos_grp[x]=sz(pos[x]);
+		pos[x].pub(x);
+		while (idx<q && Q[idx].fi.se==x){
+			qu2[Q[idx].se].fi=ufds.v[ufds.par(Q[idx].fi.fi)];
+			idx++;
+		}
+	}
+	
+	sort(all(Q),[](iii i,iii j){
+		return i.fi.fi>j.fi.fi;
+	});
+	
+	idx=0;
+	stk.clear();
+	rep(x,1,n+1) pos[x].clear();
+	ufds.reset();
+	
+	rep(x,n+1,0){
+		vall[x]=1;
+		while (!stk.empty() && arr[stk.back()]<arr[x]){
+			int temp=stk.back(); stk.pob();
+			
+			ll cnt=1;
+			
+			reverse(all(pos[temp]));
+			rep(y,0,sz(pos[temp])){
+				nxtl[pos[temp][y]]=x;
+				ufds.unions(pos[temp][y],x,x);
+				
+				vall[pos[temp][y]]+=cnt;
+				cnt=vall[pos[temp][y]]+y+2;
+			}
+			if (!stk.empty()) vall[stk.back()]+=cnt-1;
+		}
+		if (!stk.empty() && arr[stk.back()]==arr[x]){
+			swap(pos[stk.back()],pos[x]);
+			stk.back()=x;
+		}
+		else{
+			stk.pub(x);
+		}
+		pos[x].pub(x);
+		while (idx<q && Q[idx].fi.fi==x){
+			qu2[Q[idx].se].se=ufds.v[ufds.par(Q[idx].fi.se)];
+			idx++;
+		}
+	}
+	
+	rep(x,n+1,1) valr[x]+=valr[nxtr[x]];
+	rep(x,1,n+1) vall[x]+=vall[nxtl[x]];
+	
+	int a,b;
+	rep(x,0,q){
+		tie(a,b)=qu2[x];
+		
+		ans[x]=1+valr[qu[x].fi]-valr[qu2[x].fi]+vall[qu[x].se]-vall[qu2[x].se];
+		
+		ans[x]+=pref[b]-pref[a];
+		ll temp=pos_grp[b]-pos_grp[a];
+		ans[x]+=temp*(temp+1)/2;
+		
+		cout<<ans[x]<<endl;
+	}
+}
+```
+
+</details>
