@@ -52,7 +52,7 @@ The reason this works is because this does prefix sums on the columns first, and
 
 As an illustration of this code we will explictly show the transformation of a $3 \times 3$ array.
 
-$\begin{bmatrix} 1 & 1000 & 1000000 \\ 10 & 10000 & 10000000 \\ 100 & 100000 & 100000000 \end{bmatrix} \to \begin{bmatrix} 1 & 1000 & 1000000 \\ 11 & 11000 & 11000000 \\ 111 & 111000 & 111000000 \end{bmatrix} \to \begin{bmatrix} 1 & 1001 & 1001001 \\ 11 & 11011 & 11011011 \\ 111 & 111111 & 111111111 \end{bmatrix}$
+$$\begin{bmatrix} 1 & 1000 & 1000000 \\ 10 & 10000 & 10000000 \\ 100 & 100000 & 100000000 \end{bmatrix} \to \begin{bmatrix} 1 & 1000 & 1000000 \\ 11 & 11000 & 11000000 \\ 111 & 111000 & 111000000 \end{bmatrix} \to \begin{bmatrix} 1 & 1001 & 1001001 \\ 11 & 11011 & 11011011 \\ 111 & 111111 & 111111111 \end{bmatrix}$$
 
 And the same code obviously works for 3D:
 
