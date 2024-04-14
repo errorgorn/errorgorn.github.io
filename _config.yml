@@ -22,11 +22,10 @@ theme: "minima"
 
 rss: rss
 
-kramdown:
-  input: GFM
-  syntax_highlighter_opts:
-    disable: true
-    
+markdown: kramdown
+highlighter: rouge
+    input: GFM
+  
 plugins:
   - jekyll-feed
   - jekyll-sitemap
