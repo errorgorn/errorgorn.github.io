@@ -136,7 +136,7 @@ However, we can view each number as a vector of it's prime divisors. Suppose $x 
 
 It becomes clear that when our array is indexed by this vector, that our operation again becomes a high dimensional prefix sum.
 
-The time complexity would be $\sum\limits_{\substack{i \leq n\\i \text{ prime}}} \lfloor \frac{n}{i} \rfloor  \approx \int_0^n \frac{n}{i \log i} \, di = O(n \log \log n)$, where the approximation comes from prime number theorem.
+The time complexity would be $\sum\limits_{\substack{i \leq n\\\\i \text{ prime}}} \lfloor \frac{n}{i} \rfloor  \approx \int_0^n \frac{n}{i \log i} \, di = O(n \log \log n)$, where the approximation comes from prime number theorem.
 
 Btw, this is actually related to the Riemann Zeta Function. Define the Dirichlet generating function of $A$ and $B$ respectively as $\mathcal{A}(s) = \sum\limits_n \frac{A_n}{n^s}$ and $\mathcal{B}(s) = \sum\limits_n \frac{B_n}{n^s}$. As we know, the Riemann Zeta Function is $\zeta(s) = \sum\limits_n \frac{1}{n^s}$.
 
