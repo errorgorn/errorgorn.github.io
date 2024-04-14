@@ -2,7 +2,8 @@
 tags: notes
 ---
 
-## Trignometry
+## Trigonometry
+
 ### Trigonometry
 
 <center>
@@ -78,7 +79,7 @@ $2\cos(\alpha) \sin(\beta) =  \sin(\alpha + \beta) - \sin(\alpha - \beta)$
 $2\cos(\alpha) \cos(\beta) =  \cos(\alpha + \beta) + \cos(\alpha - \beta)$
 $2\sin(\alpha) \sin(\beta) =  -\cos(\alpha + \beta) + \cos(\alpha - \beta)$
 
-Proofs: expand left side
+Proofs: expand right side
 
 #### Sum to Product
 
@@ -144,6 +145,9 @@ $\cos(x) = \frac{1}{0!} - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \ld
 Their Taylor expansion is very closely related to the Taylor expansion of $e^x$. Indeed, it is the "simplest" functions that satisfy the differential equation $\frac{d^2}{d^2x} f(x) = -f(x)$.
 
 Consider the function $e^{ix}$ which traces out a circle with radius $1$. We have $e^{ix} = \cos(x) + i \sin(x)$. Since we have $\frac{d^2}{d^x} e^{ix} = - e^{ix} = -\cos(x) - i \sin(x)$, it should be clear why $\sin$ and $\cos$ should satisfy the differential equation $\frac{d^2}{d^2x} f(x) = -f(x)$.
+
+Note that using $e^{ix} = \cos(x) +i \sin(x)$ we can derive the formulas for addition of trigonometric functions.  
+$\cos(a+b) + i \sin(a+b) = e^{i(a+b)} = e^{ia} \cdot e^{ib} =(\cos(a) + i \sin(a)) \cdot (\cos(b) + i \sin(b)) = (\cos(a) \cos(b) - \sin(a) \sin(b)) + i(\sin(a) \cos(b) + \cos(a) \sin(b))$
 
 ### Differentiation of Inverse Trigonometric Functions
 
