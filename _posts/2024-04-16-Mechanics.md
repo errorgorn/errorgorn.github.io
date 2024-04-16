@@ -38,7 +38,7 @@ Define the angular velocity as $\omega = \frac{v}{r}$. It is defined such that $
 
 To maintain the circular path, the object has to be constantly accelerated towards the axis of the rotation with acceleration $a_{rad} = \frac{v^2}{r} = w^2 r$. The tangential acceleration is only responsible for increasing the speed of the object and it can be treated as 1D motion.
 
- For angular momentum and energy, we define the moment of inertia $I = \sum_i m_i r_i^2 =  \iiint_Q p(x,y,z) \| r \|^2 \, dV$. It is the analogue of mass for rational mechanics.
+ For angular momentum and energy, we define the moment of inertia $I = \sum_i m_i r_i^2 =  \iiint_Q p(x,y,z) \lVert r \rVert^2 \, dV$. It is the analogue of mass for rational mechanics.
 
 Some common values of $I$ are as follow:
 
@@ -48,7 +48,7 @@ Some common values of $I$ are as follow:
 | $I=MR^2$                                                     | $I=\frac{1}{2}MR^2$                                          | $I=\frac{2}{5}MR^2$                                          | $I=\frac{2}{3}MR^2$                                          | $I=\frac{1}{12}MR^2$                                         | $I=\frac{1}{3}MR^2$                                          |
 | All mass is distance $R$ away.                               | $\int_{0}^\tau sin^2 \theta \, d \theta = \frac{\tau}{2}$    | $\int_{0}^{1} 2 \tau r^3 \sqrt{1-r^2} \, dr = \frac{4\tau}{15}$ | $\int_{0}^{\frac \tau 2} \tau sin^3 \theta \, d\theta = \frac{4\tau}{3}$ | $\int_{0}^{\frac 12} 2 x^2 \, dx = \frac{1}{12}$             | $\int_{0}^{1} x^2 \, dx = \frac{1}{3}$                       |
 
-We also have the parrallel axis theorem. Which states that $I = I_{\text{CM}} + md^2$ where the axis is displaced from the center of mass by distance $d$. This is because $I = \int ||\vec x + \vec d|| \, dm = \int \vec x \cdot \vec x  \, dm + 2\int \vec x \cdot \vec y  \, dm + \int \vec y \cdot \vec y  \, dm = I_{\text{CM}} + 0 + md^2$. The second term is $0$ since $\int \vec x \, dm = \vec 0$ as the average of the vectors $\vec x$ must be the position of the center of mass, which is the origin.
+We also have the parrallel axis theorem. Which states that $I = I_{\text{CM}} + md^2$ where the axis is displaced from the center of mass by distance $d$. This is because $I = \int \lVert \vec x + \vec d \rVert \, dm = \int \vec x \cdot \vec x  \, dm + 2\int \vec x \cdot \vec y  \, dm + \int \vec y \cdot \vec y  \, dm = I_{\text{CM}} + 0 + md^2$. The second term is $0$ since $\int \vec x \, dm = \vec 0$ as the average of the vectors $\vec x$ must be the position of the center of mass, which is the origin.
 
 The rotational angular momentum is defined as $L = I\omega$ and the rotational kinetic energy is defined as $KE_{rot} = \frac{1}{2} I \omega^2$.
 
