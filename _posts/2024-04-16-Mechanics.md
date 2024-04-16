@@ -38,7 +38,7 @@ Define the angular velocity as $\omega = \frac{v}{r}$. It is defined such that $
 
 To maintain the circular path, the object has to be constantly accelerated towards the axis of the rotation with acceleration $a_{rad} = \frac{v^2}{r} = w^2 r$. The tangential acceleration is only responsible for increasing the speed of the object and it can be treated as 1D motion.
 
- For angular momentum and energy, we define the moment of inertia $I = \sum_i m_i r_i^2 =  \iiint_Q p(x,y,z) ||r||^2 \, dV$. It is the analogue of mass for rational mechanics.
+ For angular momentum and energy, we define the moment of inertia $I = \sum_i m_i r_i^2 =  \iiint_Q p(x,y,z) \| r \|^2 \, dV$. It is the analogue of mass for rational mechanics.
 
 Some common values of $I$ are as follow:
 
