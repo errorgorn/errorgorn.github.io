@@ -6,7 +6,7 @@ tags: notes
 
 ### Kinematics
 
-If we have functions $x(t),v(t),a(t)$ representing position, velocity and acceleration, then we have $v=\frac{d}{dt} x$ and $a=\frac{d^2}{dt^2}  x$. Speed is defined as $|v(t)|$, read question properly if asking for velocity or speed.
+If we have functions $x(t),v(t),a(t)$ representing position, velocity and acceleration, then we have $v=\frac{d}{dt} x$ and $a=\frac{d^2}{dt^2}  x$. Speed is defined as $ \lvert v(t) \rvert$, read question properly if asking for velocity or speed.
 
 For forces, generally $F=ma$. For friction force, it is applied by a surface with coefficients of friction $\mu_s$ and $\mu_k$ respectively for static and kinetic, when the object is not moving and moving respectively. If the surface has normal force $N$ on the object, the static and kinetic frictions are $\mu_sN$ and $\mu_k N$ respectively. 
 
@@ -80,4 +80,4 @@ Earlier, we defined an object to have GPE. But to be more precise, GPE is a quan
 
 Energy and momentum are conserved, they can be spammed for equations. Note that the system must be closed. For example, a human pushing a ball does not violate COE as the human has stored potential energy to activate muscles. Another example is a ball bouncing on the ground. COM does not hold as we did not consider the change in momentum of the ground (the earth).
 
-Note that for COAM, angular momentum is conserved around a single axis. For example, if you bring $2$ spinning disks together, the angular momentum about their respective axis will not add up. Instead you should choose a specific axis and consider the other's AM about that axis using the full form of the angular moment formula $\vec L = \vec R \times m \vec v_{\text{CM}} + I_{\text{CM}} \vec \omega$. Note that for a ball moving in a straight line, COAM is also preserved, as $|\vec L| = |\vec R \times m \vec v| = m |\vec R| |\vec v| \sin \theta = m |\vec v| |R_{\perp}|$.
+Note that for COAM, angular momentum is conserved around a single axis. For example, if you bring $2$ spinning disks together, the angular momentum about their respective axis will not add up. Instead you should choose a specific axis and consider the other's AM about that axis using the full form of the angular moment formula $\vec L = \vec R \times m \vec v_{\text{CM}} + I_{\text{CM}} \vec \omega$. Note that for a ball moving in a straight line, COAM is also preserved, as $\lvert \vec L \rvert = \lvert \vec R \times m \vec v \rvert = m \lvert \vec R \rvert \lvert \vec v \rvert \sin \theta = m \lvert \vec v \rvert \lvert R_{\perp} \rvert$.
