@@ -45,6 +45,7 @@ I have learnt a bit of Japanese in the beginning of 2022 by using duolingo, but 
 
 Currently the resources I am using as these:
 - <a href="https://en.wikipedia.org/wiki/Genki:_An_Integrated_Course_in_Elementary_Japanese">Genki Textbook</a>
+- <a href="https://sethclydesdale.github.io/genki-study-resources/lessons-3rd/"> Genki Exercises Online</a>
 - <a href="https://guidetojapanese.org/learn/">Tae Kim's guide to Japanese Grammar</a>, recommended by a friend
 - <a href="https://takoboto.jp/"> Takaboto </a>
 - my own anki deck
