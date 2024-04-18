@@ -36,3 +36,6 @@ We know that $I = \arctan(x)$. Therefore, $\int\frac{1}{(1+x^2)^2}\, dx  = \frac
 
 Note that these answers are equal as $\sin(2 \arctan(x)) = \sin(2 \theta) = 2 \sin(\theta) \cos(\theta) = \frac{2 \tan(\theta)}{1+\tan^2(\theta)} = \frac{2x}{1+x^2}$
 
+<hr>
+
+Generally, this method should work for any integral of the form $\int \frac{1}{(1 \pm x^2)^a} \, dx$ or $\int \frac{x^2}{(1 \pm x^2)^a} \, dx$. The benefit of this method is that we won't have to simplify stuff like $\sin(2 \arctan(x))$.
