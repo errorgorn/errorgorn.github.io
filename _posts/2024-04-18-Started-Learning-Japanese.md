@@ -63,6 +63,8 @@ Also, sometimes the meaning of the Japanese kanji totally does not match their C
 
 Today I also tried to read song lyrics from a Japanese song (ラブソングが歌えない), but it seems that I have still not completely learnt any grammar L, but being able to understand Chinese and read katakana means that one has the most vague understanding of the meaning anyways.
 
+Also, I've been using the flick keyboard, it's quite fun to type. I feel like I'm building quite a bit of muscle memory already.
+
 <hr>
 
 Anyways, I told my mother about learning Japanese and she brought up learning Singaporean Hokkien. But it seems like a hard thing to do because no one has wrote it down, I could only find <a href="https://blog.nus.edu.sg/linus/2020/03/25/a-practical-english-hokkien-dictionary/"> this dictionary written in 1950 </a>. And indeed, most Singaporeans only learn how to listen and speak hokkien, they literally have no way to write it down. They could use English with diacritics but hokkien has way too many phonemes to do so.
