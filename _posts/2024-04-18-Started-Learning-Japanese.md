@@ -67,7 +67,7 @@ Today I also tried to read song lyrics from a Japanese song (ラブソングが�
 
 Anyways, I told my mother about learning Japanese and she brought up learning Singaporean Hokkien. But it seems like a hard thing to do because no one has wrote it down, I could only find <a href="https://blog.nus.edu.sg/linus/2020/03/25/a-practical-english-hokkien-dictionary/"> this dictionary written in 1950 </a>. And indeed, most Singaporeans only learn how to listen and speak hokkien, they literally have no way to write it down. They could use English with diacritics but hokkien has way too many phonemes to do so.
 
-But ok, maybe I will try to learn <a href="https://en.m.wikipedia.org/wiki/Taiwanese_Phonetic_Symbols">Taiwanese Phonetic Symbols</a> to be able to write down Hokkien and write them in an anki deck. 
+But ok, maybe I will try to learn <a href="https://en.wikipedia.org/wiki/Pe%CC%8Dh-%C5%8De-j%C4%AB"> Pe̍h-ōe-jī </a> or <a href="https://en.m.wikipedia.org/wiki/Taiwanese_Phonetic_Symbols">Taiwanese Phonetic Symbols</a> to be able to write down Hokkien and write them in an anki deck. 
 
 While there is Taiwanese Hokkien dictionaries, my mother claims that is only about 80% similar to Singaporean Hokkien and the tones are slightly different such that Singaporean Hokkien sounds like a gangster is speaking it. But perhaps this would be a good starting point to learn Singaporean Hokkien anyways?
 
