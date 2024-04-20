@@ -1,5 +1,5 @@
 ---
-tags: notes
+tags: notes math
 ---
 
 ## Trigonometry

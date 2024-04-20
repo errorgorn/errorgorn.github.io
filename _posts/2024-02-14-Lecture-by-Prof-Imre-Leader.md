@@ -1,5 +1,5 @@
 ---
-tags: misc
+tags: misc math
 ---
 
 ## Lecture by Prof Imre Leader
