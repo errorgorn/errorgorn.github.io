@@ -1,6 +1,6 @@
 ---
 description: Problemset for a Lecture given in May 2022
-tags: math cp
+tags: math CP
 ---
 
 ## Some Greedy Problems
