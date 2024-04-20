@@ -1,5 +1,5 @@
 ---
-tags: Math
+tags: math
 ---
 
 ## Magic Integral by Parts
