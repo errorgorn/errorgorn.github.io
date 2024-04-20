@@ -23,8 +23,7 @@ We can expand out $\tan(\frac{\theta - \frac \tau 4}{2}) = \frac{\sin(\theta - \
 Therefore, $\int \frac{1}{x \sqrt{6x-x^2}} \, dx = - \frac{\sqrt{6x-x^2}}{3x}$
 
 <hr>
-
-edit: it turns out a much simpler solution to the second integrals exists &#128569;&#128569;&#128569;&#128569;&#128569;
+**EDIT:** it turns out a much simpler solution to the second integrals exists &#128569;&#128569;&#128569;&#128569;&#128569;
 
 $$\begin{align} \int \frac{1}{x \sqrt{6x-x^2}} \, dx &= \int \frac{1}{x^2 \sqrt{\frac 6 x -1}} \, dx \\ &=  \int - \frac{1}{6 \sqrt{u}} \, du, \quad u =\frac 6 x - 1, \quad \frac{du}{dx} = -\frac{6}{x^2} \\ &=  - \frac {\sqrt u} 3 \\ &= - \frac{\sqrt{6x -x^2}}{3x} \end{align}$$
 
