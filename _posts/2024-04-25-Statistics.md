@@ -188,6 +188,8 @@ But for us to know the parameters of the resulting normal distribution we will h
 
 **Note**: the theorem is not saying that the set $\{X_1,X_2,\ldots,X_N\}$ is a normal distribution. To see why, let $X$ be the distribution whose value is $0$ or $1$ with $\frac 1 2$ probability.
 
+Corollary: Binomial distribution with large $n$ is approximately normal.
+
 ### Sample Variance and Mean
 
 Let $x_1,x_2,\ldots,x_n$ be a sample of elements from the distribution $X$. In our calculations, we will allow the sample to contain repeated elements.
