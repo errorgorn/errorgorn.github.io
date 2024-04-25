@@ -94,7 +94,7 @@ $\text{Var}(X) = F''(z) + F'(z) - F'(z)^2 \mid _{z=1} = \frac{2q}{p^2} + \frac{1
 
 If an event is randomly scattered and has a mean occurrence of $\lambda$ in a time interval, we denote the number of occurrences of the event with the probability distribution $X \sim Po(\lambda)$. Define $Po(\lambda) = \lim\limits_{n \to \infty} B(n,\frac{\lambda}{n})$. Then, we have $P(X=x) = \lim\limits_{n\to \infty} (\frac{\lambda}{n})^x \cdot (1-\frac{\lambda}{n})^{n-x} \cdot \binom{n}{x} = \frac{\lambda^x}{x!} \cdot \lim\limits_{n \to \infty} (1-\frac{\lambda}{n})^n = e^{-\lambda} \cdot \frac{\lambda^x}{x!}$.
 
-Thus, $Po(\lambda)$ is described by the ogf $F(z)=e^{\lambda (z-1)}$. Note that $F'(z) \mid _{z=1} = \lambda e^{\lambda(z-1)} \mid _{z=1} = \lambda$ and $F''(z)\mid_{z=1} = \lambda^2 e^{\lambda(z-1)} \mid _{z=1} = \lambda^2$.
+Thus, $Po(\lambda)$ is described by the ogf $F(z)=e^{\lambda (z-1)}$. Note that $F'(z) \mid _ {z=1} = \lambda e^{\lambda(z-1)} \mid _ {z=1} = \lambda$ and $F''(z)\mid _ {z=1} = \lambda^2 e^{\lambda(z-1)} \mid _ {z=1} = \lambda^2$.
 
 Therefore, as we expect, $E(X) = F'(z)\mid_{z=1} = \lambda$ and $\text{Var}(X) = F''(z) + F'(z) - F'(z)^2 \mid _{z=1} = \lambda^2 + \lambda - \lambda^2 = \lambda$.
 
@@ -154,7 +154,7 @@ The standard normal distribution has the $p(x) = e^{-x^2}$, without scaling.
 
 $\int_{- \infty}^{\infty} e^{-x^2} \, dx = \sqrt{\int_{- \infty}^{\infty} e^{-x^2} \, dx \cdot \int_{- \infty}^{\infty} e^{-y^2} \, dy} = \sqrt{\iint_{\mathbb{R}^2} e^{-(x^2+y^2)} \, dx \,dy} = \sqrt{\int_0^\infty \int_0^\tau r e^{-r^2} \,d\theta \, dr} = \sqrt{\tau \int_0^\infty r e^{-r^2} \, dr} = \frac{\sqrt \tau}{\sqrt 2}$.
 
-We can also compute the standard deviation as $\int_{-\infty}^{\infty} x^2 \cdot e^{-x^2} \, dx = ([-\frac{x}{2} \cdot e^{-x^2}\]_{-\infty}^{\infty} + \int_{-\infty}^{\infty} \frac{1}{2} \cdot e^{-x^2} \, dx) = \frac{\sqrt \tau}{2 \sqrt 2}$.
+We can also compute the standard deviation as $\int _ {-\infty}^{\infty} x^2 \cdot e^{-x^2} \, dx = ([-\frac{x}{2} \cdot e^{-x^2}\] _ {-\infty}^{\infty} + \int _ {-\infty}^{\infty} \frac{1}{2} \cdot e^{-x^2} \, dx) = \frac{\sqrt \tau}{2 \sqrt 2}$.
 
 Therefore, the pdf of a standard normal distribution has the form $\frac{1}{\sqrt{\tau}} e^{-\frac{x^2}{2}}$. It has $\mu=0$ and $\sigma=1$.
 
