@@ -26,9 +26,9 @@ $A$ and $B$ are disjoint if $P(A \cap B)=0$ or $P(A \cup B) = P(A)+P(B)$.
 
 $A$ and $B$ are independent if $P(A \cap B) = P(A) \cdot P(B)$ and $P(A \cup B) = P(A) + P(B) - P(A) \cdot P(B)$.
 
-$P(A|B) = \frac{P(A \cup B)}{P(B)}$ is defined as the probability that $A$ happens **given** that $B$ happens. If $A$ and $B$ are disjoint or independent, then $P(A|B)$ is $0$ and $P(A)$ respectively.
+$P(A\midB) = \frac{P(A \cup B)}{P(B)}$ is defined as the probability that $A$ happens **given** that $B$ happens. If $A$ and $B$ are disjoint or independent, then $P(A\midB)$ is $0$ and $P(A)$ respectively.
 
-Bayes' theorem: $P(A | B) = \frac{P(B|A) \cdot P(A)}{P(B)}$.
+Bayes' theorem: $P(A \mid B) = \frac{P(B\midA) \cdot P(A)}{P(B)}$.
 
 ### Random Variables
 
@@ -72,31 +72,31 @@ We say a distribution is *approximately* a binomial distribution if the probabil
 
 For instance, consider drawing $n$ balls from a collection of $a$ red and $b$ blue balls. The number of red balls in this distribution is approximately $B(n, \frac{a}{a+b})$, if $n \ll a+b$. We consider a distribution to be approximately binomial if the popular is at least $10$ times larger than the sample.
 
-$X$ is described by the ogf $F(z) = (q+pz)^n$. Note that $F'(z)|_{z=1} = np (q+pz)^{n-1}|_{z=1}=np$ and $F''(z)|_{z=1} = n(n-1)p^2 (q+pz)^{n-2}|_{z=1} = n(n-1) p^2$
+$X$ is described by the ogf $F(z) = (q+pz)^n$. Note that $F'(z)\mid_{z=1} = np (q+pz)^{n-1}\mid_{z=1}=np$ and $F''(z)\mid_{z=1} = n(n-1)p^2 (q+pz)^{n-2}\mid_{z=1} = n(n-1) p^2$
 
 - $P(X = x) = [z^x] F(z) = p^x q^{n-x} \binom{n}{x}$
-- $E(X) = F'(z) |_{z=1} = np$
-- $\text{Var}(X) = F''(z) + F'(z) - F'(z)^2 | _{z=1} = n(n-1)p^2 + np - n^2p^2 = npq$
+- $E(X) = F'(z) \mid_{z=1} = np$
+- $\text{Var}(X) = F''(z) + F'(z) - F'(z)^2 \mid _{z=1} = n(n-1)p^2 + np - n^2p^2 = npq$
 
 #### Geometric Distribution
 
 The geometric distribution is the number of steps a procedure has to be repeated until a success, if the probability of each success is $p$.
 
-We have $P(X = x) = p q^{x-1}$, so it is described the ogf $F(z) = \frac{pz}{1-qz}$. Note that $F'(z) | _{z=1} = \frac{p}{(1-qz)^2} | _{z=1} = \frac{1}{p}$ and $F''(z)|_{z=1} = \frac{2pq}{(1-qz)^3} |_{z=1}  = \frac{2q}{p^2}$.
+We have $P(X = x) = p q^{x-1}$, so it is described the ogf $F(z) = \frac{pz}{1-qz}$. Note that $F'(z) \mid _{z=1} = \frac{p}{(1-qz)^2} \mid _{z=1} = \frac{1}{p}$ and $F''(z)\mid_{z=1} = \frac{2pq}{(1-qz)^3} \mid_{z=1}  = \frac{2q}{p^2}$.
 
 $P(X > n) = q^n$. Combinatorically, it is the probability that the first $n$ tries are failures. Alternatively, $P(X > n) = 1 - [z^n] \frac{F(z)}{1-z} = 1 - [z^n] \frac{pz}{(1-z)(1-qz)} = 1- [z^{n-1}](\frac{1}{1-z}-\frac{q}{1-qz}) = 1 - (1 - q^n) = q^n$
 
-$E(X) = \frac{1}{p}$ as we can setup the equation $E(X) = p \cdot (1) + q \cdot (1+E(X))$. Alternatively, $E(X) = F'(z)|_{z=1} = \frac{1}{p}$.
+$E(X) = \frac{1}{p}$ as we can setup the equation $E(X) = p \cdot (1) + q \cdot (1+E(X))$. Alternatively, $E(X) = F'(z)\mid_{z=1} = \frac{1}{p}$.
 
-$\text{Var}(X) = F''(z) + F'(z) - F'(z)^2 | _{z=1} = \frac{2q}{p^2} + \frac{1}{p} - \frac{1}{p^2} = \frac{q}{p^2}$.
+$\text{Var}(X) = F''(z) + F'(z) - F'(z)^2 \mid _{z=1} = \frac{2q}{p^2} + \frac{1}{p} - \frac{1}{p^2} = \frac{q}{p^2}$.
 
 #### Poisson Distribution
 
 If an event is randomly scattered and has a mean occurrence of $\lambda$ in a time interval, we denote the number of occurrences of the event with the probability distribution $X \sim Po(\lambda)$. Define $Po(\lambda) = \lim\limits_{n \to \infty} B(n,\frac{\lambda}{n})$. Then, we have $P(X=x) = \lim\limits_{n\to \infty} (\frac{\lambda}{n})^x \cdot (1-\frac{\lambda}{n})^{n-x} \cdot \binom{n}{x} = \frac{\lambda^x}{x!} \cdot \lim\limits_{n \to \infty} (1-\frac{\lambda}{n})^n = e^{-\lambda} \cdot \frac{\lambda^x}{x!}$.
 
-Thus, $Po(\lambda)$ is described by the ogf $F(z)=e^{\lambda (z-1)}$. Note that $F'(z) | _{z=1} = \lambda e^{\lambda(z-1)} | _{z=1} = \lambda$ and $F''(z)|_{z=1} = \lambda^2 e^{\lambda(z-1)} | _{z=1} = \lambda^2$.
+Thus, $Po(\lambda)$ is described by the ogf $F(z)=e^{\lambda (z-1)}$. Note that $F'(z) \mid _{z=1} = \lambda e^{\lambda(z-1)} \mid _{z=1} = \lambda$ and $F''(z)\mid_{z=1} = \lambda^2 e^{\lambda(z-1)} \mid _{z=1} = \lambda^2$.
 
-Therefore, as we expect, $E(X) = F'(z)|_{z=1} = \lambda$ and $\text{Var}(X) = F''(z) + F'(z) - F'(z)^2 | _{z=1} = \lambda^2 + \lambda - \lambda^2 = \lambda$.
+Therefore, as we expect, $E(X) = F'(z)\mid_{z=1} = \lambda$ and $\text{Var}(X) = F''(z) + F'(z) - F'(z)^2 \mid _{z=1} = \lambda^2 + \lambda - \lambda^2 = \lambda$.
 
 Additive property of Poisson Distribution: If $X \sim Po(\lambda)$ and $Y \sim Po(\mu)$, then $X+Y \sim Po(\lambda + \mu)$.
 Proof: $e^{\lambda(z-1)} \cdot e^{\mu(z-1)} = e^{(\lambda+\mu)(z-1)}$
@@ -112,7 +112,7 @@ For $X$ to be a continuous random variable, it has to satisfy:
 - $\lim\limits_{x \to -\infty} c(x) = 0$
 - $\lim\limits_{x \to \infty} c(x) = 1$
 - monotone non-decreasing
-- right continuous ($x$ is right continuous if for every $\epsilon>0$, there exists a $\delta>0$ such that for all $x \leq y < x +\delta$, it satisfies $|c(x)-c(y)| < \epsilon$, i.e. $\lim\limits_{y \to x^+} c(y) = c(x)$).
+- right continuous ($x$ is right continuous if for every $\epsilon>0$, there exists a $\delta>0$ such that for all $x \leq y < x +\delta$, it satisfies $\midc(x)-c(y)\mid < \epsilon$, i.e. $\lim\limits_{y \to x^+} c(y) = c(x)$).
 
 We can define the probability density function (pdf) as $p(x) = \frac{d}{dx} c(x)$, $p$ may not be defined for all real numbers as there may be discontinuities in $c$. To simplify things, we will not handle random variables that are both discrete and continuous, so that we shall assume $c$​ is continuous.
 
@@ -210,7 +210,7 @@ Let $\hat y_i = ax_i+b_i$. The **residue** is defined as $e_i = y_i - \hat y_i$.
 
 More generally, if we have the equation $Ax=b$, $A \in \mathbb{R}^{m \times n}$, $x \in \mathbb{R}^n$, $b \in \mathbb{R}^b$ and we wish to minimize $\| Ax-b\|^2$, how do we find $x$? Our original problem has $A = \begin{pmatrix} x_1 & 1 \\\\ x_2 & 1 \\\\ \vdots \end{pmatrix}$ and $b = \begin{pmatrix} y_1 \\\\ y_2 \\\\ \vdots\end{pmatrix}$.
 
-We have that $f(x) = \| Ax - b \|^2 = (Ax-b)^T(Ax-b) = x^T A^TAx - x^T A^Tb - b^TAx + b^Tb$.
+We have that $f(x) = \\mid Ax - b \\mid^2 = (Ax-b)^T(Ax-b) = x^T A^TAx - x^T A^Tb - b^TAx + b^Tb$.
 
 Let $\nabla(f) = \begin{pmatrix}  \frac{\partial f}{\partial x_1} \\\\ \frac{\partial f}{\partial x_2} \\\\ \vdots\end{pmatrix}$.
 
@@ -260,9 +260,9 @@ From the residuals $e_i$, we can plot out another graph whose best fit line woul
 
 Given an ogf $F(z)$ describing a discrete distribution $X$ where $F(z) = \sum p_i \cdot z^i$.
 
-- $E(X) = (xD) F(z) |_{z=1} =  F'(z) |_{z=1}$ 
-- $\text{Var}(X) = (xD)^2 F(z) - ((xD) F(z))^2 |_{z=1} = F''(z) + F'(z) - F'(z)^2 | _{z=1}$
+- $E(X) = (xD) F(z) \mid_{z=1} =  F'(z) \mid_{z=1}$ 
+- $\text{Var}(X) = (xD)^2 F(z) - ((xD) F(z))^2 \mid_{z=1} = F''(z) + F'(z) - F'(z)^2 \mid _{z=1}$
 
 For some weird reason, this is what right and left skew mean. It skews to the side that it tapers off to.
 
-<img src="https://cdn.discordapp.com/attachments/752406106009239585/1226239571520393267/1XU3Kdl521XnWHECHZ7XOaQ.png?ex=6629fa58&is=6628a8d8&hm=470b29e9323212f7278370279a7c137110991c477495d40958723d50a5f6287b&" alt="img" style="zoom:60%;" />
+<img src="https://cdn.discordapp.com/attachments/752406106009239585/1226239571520393267/1XU3Kdl521XnWHECHZ7XOaQ.png?ex=6629fa58&is=6628a8d8&hm=470b29e9323212f7278370279a7c137110991c477495d40958723d50a5f6287b&" alt="img" />
