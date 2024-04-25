@@ -26,9 +26,9 @@ $A$ and $B$ are disjoint if $P(A \cap B)=0$ or $P(A \cup B) = P(A)+P(B)$.
 
 $A$ and $B$ are independent if $P(A \cap B) = P(A) \cdot P(B)$ and $P(A \cup B) = P(A) + P(B) - P(A) \cdot P(B)$.
 
-$P(A\midB) = \frac{P(A \cup B)}{P(B)}$ is defined as the probability that $A$ happens **given** that $B$ happens. If $A$ and $B$ are disjoint or independent, then $P(A\midB)$ is $0$ and $P(A)$ respectively.
+$P(A\mid B) = \frac{P(A \cup B)}{P(B)}$ is defined as the probability that $A$ happens **given** that $B$ happens. If $A$ and $B$ are disjoint or independent, then $P(A\mid B)$ is $0$ and $P(A)$ respectively.
 
-Bayes' theorem: $P(A \mid B) = \frac{P(B\midA) \cdot P(A)}{P(B)}$.
+Bayes' theorem: $P(A \mid B) = \frac{P(B\mid A) \cdot P(A)}{P(B)}$.
 
 ### Random Variables
 
@@ -60,7 +60,7 @@ Some properties of $\text{Var}(X)$:
 
 There are only two outcomes, *success* and *failure*, where success happens with probability $p$.
 
-$P(X=x) = \begin{cases}p, &\text{ if } x=1 \\ q,& \text{ if } x=0\end{cases}$
+$P(X=x) = \begin{cases}p, &\text{ if } x=1 \\\\ q,& \text{ if } x=0\end{cases}$
 
 For brevity, we will define $q=1-p$.
 
@@ -74,7 +74,7 @@ For instance, consider drawing $n$ balls from a collection of $a$ red and $b$ bl
 
 $X$ is described by the ogf $F(z) = (q+pz)^n$. Note that $F'(z)\mid_{z=1} = np (q+pz)^{n-1}\mid_{z=1}=np$ and $F''(z)\mid_{z=1} = n(n-1)p^2 (q+pz)^{n-2}\mid_{z=1} = n(n-1) p^2$
 
-- $P(X = x) = [z^x] F(z) = p^x q^{n-x} \binom{n}{x}$
+- $P(X = x) = [z^x\] F(z) = p^x q^{n-x} \binom{n}{x}$
 - $E(X) = F'(z) \mid_{z=1} = np$
 - $\text{Var}(X) = F''(z) + F'(z) - F'(z)^2 \mid _{z=1} = n(n-1)p^2 + np - n^2p^2 = npq$
 
@@ -82,9 +82,9 @@ $X$ is described by the ogf $F(z) = (q+pz)^n$. Note that $F'(z)\mid_{z=1} = np (
 
 The geometric distribution is the number of steps a procedure has to be repeated until a success, if the probability of each success is $p$.
 
-We have $P(X = x) = p q^{x-1}$, so it is described the ogf $F(z) = \frac{pz}{1-qz}$. Note that $F'(z) \mid _{z=1} = \frac{p}{(1-qz)^2} \mid _{z=1} = \frac{1}{p}$ and $F''(z)\mid_{z=1} = \frac{2pq}{(1-qz)^3} \mid_{z=1}  = \frac{2q}{p^2}$.
+We have $P(X = x) = p q^{x-1}$, so it is described the ogf $F(z) = \frac{pz}{1-qz}$. Note that $F'(z) \mid_{z=1} = \frac{p}{(1-qz)^2} \mid_{z=1} = \frac{1}{p}$ and $F''(z)\mid_{z=1} = \frac{2pq}{(1-qz)^3} \mid_{z=1}  = \frac{2q}{p^2}$.
 
-$P(X > n) = q^n$. Combinatorically, it is the probability that the first $n$ tries are failures. Alternatively, $P(X > n) = 1 - [z^n] \frac{F(z)}{1-z} = 1 - [z^n] \frac{pz}{(1-z)(1-qz)} = 1- [z^{n-1}](\frac{1}{1-z}-\frac{q}{1-qz}) = 1 - (1 - q^n) = q^n$
+$P(X > n) = q^n$. Combinatorically, it is the probability that the first $n$ tries are failures. Alternatively, $P(X > n) = 1 - [z^n\] \frac{F(z)}{1-z} = 1 - [z^n\] \frac{pz}{(1-z)(1-qz)} = 1- [z^{n-1}\](\frac{1}{1-z}-\frac{q}{1-qz}) = 1 - (1 - q^n) = q^n$
 
 $E(X) = \frac{1}{p}$ as we can setup the equation $E(X) = p \cdot (1) + q \cdot (1+E(X))$. Alternatively, $E(X) = F'(z)\mid_{z=1} = \frac{1}{p}$.
 
@@ -112,7 +112,7 @@ For $X$ to be a continuous random variable, it has to satisfy:
 - $\lim\limits_{x \to -\infty} c(x) = 0$
 - $\lim\limits_{x \to \infty} c(x) = 1$
 - monotone non-decreasing
-- right continuous ($x$ is right continuous if for every $\epsilon>0$, there exists a $\delta>0$ such that for all $x \leq y < x +\delta$, it satisfies $\midc(x)-c(y)\mid < \epsilon$, i.e. $\lim\limits_{y \to x^+} c(y) = c(x)$).
+- right continuous ($x$ is right continuous if for every $\epsilon>0$, there exists a $\delta>0$ such that for all $x \leq y < x +\delta$, it satisfies $\lvert c(x)-c(y) \rvert < \epsilon$, i.e. $\lim\limits_{y \to x^+} c(y) = c(x)$).
 
 We can define the probability density function (pdf) as $p(x) = \frac{d}{dx} c(x)$, $p$ may not be defined for all real numbers as there may be discontinuities in $c$. To simplify things, we will not handle random variables that are both discrete and continuous, so that we shall assume $c$​ is continuous.
 
@@ -144,8 +144,8 @@ From the Poisson Distribution, we know that $P(X \leq x) = 1- P_{Po(\lambda t)}(
 
 Therefore, $p(x) = \frac{d}{dx} 1- e^{-\lambda t} = \lambda e^{-\lambda x}$, for $x \leq 0$.
 
-- $E(X) = \int_{0}^{\infty} x \lambda e^{-\lambda x} \, dx = [-x  e^{-\lambda x}]_{0}^{\infty} + \int_{0}^{\infty}  e^{-\lambda x} \, dx = \frac{1}{\lambda}$
-- $E(X) = \int_{0}^{\infty} x^2 \lambda e^{-\lambda x} \, dx = [-x^2  e^{-\lambda x}]_{0}^{\infty} + \int_{0}^{\infty}  2xe^{-\lambda x} \, dx = \frac{2}{\lambda^2}$
+- $E(X) = \int_{0}^{\infty} x \lambda e^{-\lambda x} \, dx = [-x  e^{-\lambda x} \]_{0}^{\infty} + \int _{0}^{\infty}  e^{-\lambda x} \, dx = \frac{1}{\lambda}$
+- $E(X) = \int_{0}^{\infty} x^2 \lambda e^{-\lambda x} \, dx = [-x^2  e^{-\lambda x} \]_{0}^{\infty} + \int _{0}^{\infty}  2xe^{-\lambda x} \, dx = \frac{2}{\lambda^2}$
 - $\text{Var}(X) = E(X^2) - E(X)^2 = \frac{2}{\lambda^2} - (\frac{1}{\lambda})^2= \frac{1}{\lambda^2}$
 
 #### Normal Distribution
@@ -154,7 +154,7 @@ The standard normal distribution has the $p(x) = e^{-x^2}$, without scaling.
 
 $\int_{- \infty}^{\infty} e^{-x^2} \, dx = \sqrt{\int_{- \infty}^{\infty} e^{-x^2} \, dx \cdot \int_{- \infty}^{\infty} e^{-y^2} \, dy} = \sqrt{\iint_{\mathbb{R}^2} e^{-(x^2+y^2)} \, dx \,dy} = \sqrt{\int_0^\infty \int_0^\tau r e^{-r^2} \,d\theta \, dr} = \sqrt{\tau \int_0^\infty r e^{-r^2} \, dr} = \frac{\sqrt \tau}{\sqrt 2}$.
 
-We can also compute the standard deviation as $\int_{-\infty}^{\infty} x^2 \cdot e^{-x^2} \, dx = ([-\frac{x}{2} \cdot e^{-x^2}]_{-\infty}^{\infty} + \int_{-\infty}^{\infty} \frac{1}{2} \cdot e^{-x^2} \, dx) = \frac{\sqrt \tau}{2 \sqrt 2}$.
+We can also compute the standard deviation as $\int_{-\infty}^{\infty} x^2 \cdot e^{-x^2} \, dx = ([-\frac{x}{2} \cdot e^{-x^2}\]_{-\infty}^{\infty} + \int_{-\infty}^{\infty} \frac{1}{2} \cdot e^{-x^2} \, dx) = \frac{\sqrt \tau}{2 \sqrt 2}$.
 
 Therefore, the pdf of a standard normal distribution has the form $\frac{1}{\sqrt{\tau}} e^{-\frac{x^2}{2}}$. It has $\mu=0$ and $\sigma=1$.
 
