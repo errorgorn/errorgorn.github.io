@@ -7,13 +7,13 @@ tags: notes math
 ### Trigonometry
 
 <center>
-  <img src="https://cdn.discordapp.com/attachments/752406106009239585/1228659294308929556/image.png?ex=662cd923&is=661a6423&hm=fc74a127b061b50aa933efaa775a77f49828571baae53b055b716b9663d5d677&">
+  <img src="https://i.ibb.co/XVXWbdN/image.png">
 </center>
 
 Define $\sin(\theta)$ and $\cos(\theta)$ as the side lengths of the above triangle. Note that these values are defined for all real values of $\theta$, for example with $\frac{\tau}{4}<\theta<\frac{\tau}{2}$, $\sin(\theta)$ is positive but $\cos(\theta)$ is negative.
 
 <center>
-    <img src="https://cdn.discordapp.com/attachments/752406106009239585/1228659953724817519/image.png?ex=662cd9c0&is=661a64c0&hm=1e7e9ff35c370f617a619861aaa9f0693c848b800c577c95382e34d844f34cd6&">
+    <img src="https://i.ibb.co/wytzbh0/image.png">
 </center>
 
 In the above graph, the red line is $\sin$ while the blue line is $\cos$.
@@ -35,7 +35,7 @@ Along with those three functions, we also have $\csc(\theta) = \frac{1}{\sin(\th
 #### Sine Rule
 
 <center>
-    <img src="https://cdn.discordapp.com/attachments/752406106009239585/1228661886522884108/image.png?ex=662cdb8d&is=661a668d&hm=7eb22038bf4c0e9f3d4fe511b6a1a972b9a77c200c55fdf75b4bb334c29d8eec&">
+    <img src="https://i.ibb.co/0t1zDfb/image.png">
 </center>
 
 $\frac{\sin(\alpha)}{A} = \frac{\sin(b)}{B}$
