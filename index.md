@@ -1,1 +1,1 @@
-idk all the cool kids have blogs
+三人行，必有我师
