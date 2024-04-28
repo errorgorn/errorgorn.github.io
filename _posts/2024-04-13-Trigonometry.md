@@ -27,7 +27,7 @@ By the Pythagorean theorem, we also have $\sin^2 (\theta) + \cos^2 (\theta) = 1$
 We also define the function $\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)}$. Intuitively, it is the gradient of the line with angle $\theta$. Below is the graph of $\tan$.
 
 <center>
-    <img src="https://cdn.discordapp.com/attachments/752406106009239585/1228670710915010590/image.png?ex=662ce3c5&is=661a6ec5&hm=62120949643ec5da119de532f0708ab94abfe999f80a2d566c601130bd8ff442&" width="50%">
+    <img src="https://i.ibb.co/PCdFGnR/image.png" width="50%">
 </center>
 
 Along with those three functions, we also have $\csc(\theta) = \frac{1}{\sin(\theta)}$, $\sec(\theta) = \frac{1}{\cos(\theta)}$ and $\cot(\theta) = \frac{1}{\cot(\theta)}$. They exist for historical reasons because of function tables. We really only need $\sin$ and $\cos$.
@@ -51,7 +51,7 @@ $\sin(\alpha+\beta) = \sin(\alpha) \cos(\beta) +  \cos(\alpha) \sin(\beta)$
 Proof:
 
 <center>
-    <img src="https://cdn.discordapp.com/attachments/752406106009239585/1228667216296149074/image.png?ex=662ce083&is=661a6b83&hm=5da8286ebf8245c623b73fd3adf23141c427559967d091c459a7868ae1442cb9&">
+    <img src="https://i.ibb.co/C9PhcZR/image.png">
 </center>
 
 In the above diagram, we have $\frac{A+B}{\sin(\alpha+\beta)} = \frac{L}{\sin(\theta)}$ by sine rule and $A = L \sin(\alpha)$ by the definition of $\sin$.
@@ -92,7 +92,7 @@ If we write $u = \alpha + \beta$ and $v = \alpha-\beta$ above, then $\alpha = \f
 Similarly, we have $\arccos : [-1,1] \to [0, \frac \tau 2]$ and $\arctan : \mathbb{R} \to [-\frac \tau 4, \frac \tau 4]$.
 
 <center>
-    <img src="https://cdn.discordapp.com/attachments/752406106009239585/1228675076451336292/image.png?ex=662ce7d5&is=661a72d5&hm=c6416e3b78661da50485e1dbbc295de1c1288daa5f9f4445264f98699322f456&" width="60%">
+    <img src="https://i.ibb.co/x88mVrz/image.png" width="60%">
 </center>
 
 The graphs in green, purple and red are respectively $\arcsin$, $\arccos$ and $\arctan$.
@@ -112,7 +112,7 @@ Since $\lim\limits_{h \to 0} \cos(h)  = 1$, we have  $\frac{d}{dx} \sin(x) = \li
 Now, we will need to find $\lim\limits_{h \to 0} \frac{\sin(h)}{h}$. 
 
 <center>
-    <img src="https://cdn.discordapp.com/attachments/752406106009239585/1228745246578577439/UdlyK.png?ex=662d292f&is=661ab42f&hm=5e559d3028d3a20578b4729a3c789dc335cf6a11732b24b4e28c31d65c92a6b2&" width="50%">
+    <img src="https://i.ibb.co/rcnYtwT/image.png" width="50%">
 </center>
 
 In the above diagram, the area of triangle $ABC$, sector $ABC$ and triangle $ABD$ are $\frac 12 \sin (x)$, $\frac12 x$ and $\frac{1}{2} \tan (x)$ respectively.
@@ -158,7 +158,7 @@ Therefore, $\frac{d}{dx} f^{-1}(x) = \frac{1}{f'(f^{-1}(x))}$.
 So, we have $\frac{d}{dx} \arcsin(x) = \frac{1}{\cos(\arcsin(x))}$.
 
 <center>
-    <img src="https://cdn.discordapp.com/attachments/752406106009239585/1228750604374114344/image.png?ex=662d2e2d&is=661ab92d&hm=7b79a87ad13898dc99f48c35b784bf9c79d52b6beb676e763ce5b645d8bdafcf&">
+    <img src="https://i.ibb.co/MsWsR2t/image.png">
 </center>
 
 In the above diagram, $\cos(\arcsin(x)) = \cos(\theta) = \sqrt{1-x^2}$
@@ -172,7 +172,7 @@ Similarly, $\frac{d}{dx} \arccos(x) = \frac{1}{- \sin(\arccos(x))} = - \frac{1}{
 $\frac{d}{dx} \arctan(x) = \cos^2(\arctan(x))$
 
 <center>
-    <img src="https://cdn.discordapp.com/attachments/752406106009239585/1228753354927243405/image.png?ex=662d30bc&is=661abbbc&hm=f33b73a0e6dde3866b637d2f3599e39350022b7b24ea0a96749e09ef0cec93ea&">
+    <img src="https://i.ibb.co/fpdRC05/image.png">
 </center>
 
 In the above diagram, $\cos^2(\arctan(x)) = \cos^2(\theta) = \frac{1}{1+x^2}$
