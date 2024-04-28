@@ -7,13 +7,13 @@ tags: notes math
 ### Trigonometry
 
 <center>
-  <img src="https://i.ibb.co/XVXWbdN/image.png">
+  <img src="/media/trig1.png">
 </center>
 
 Define $\sin(\theta)$ and $\cos(\theta)$ as the side lengths of the above triangle. Note that these values are defined for all real values of $\theta$, for example with $\frac{\tau}{4}<\theta<\frac{\tau}{2}$, $\sin(\theta)$ is positive but $\cos(\theta)$ is negative.
 
 <center>
-    <img src="https://i.ibb.co/wytzbh0/image.png">
+    <img src="/media/trig2.png">
 </center>
 
 In the above graph, the red line is $\sin$ while the blue line is $\cos$.
@@ -27,7 +27,7 @@ By the Pythagorean theorem, we also have $\sin^2 (\theta) + \cos^2 (\theta) = 1$
 We also define the function $\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)}$. Intuitively, it is the gradient of the line with angle $\theta$. Below is the graph of $\tan$.
 
 <center>
-    <img src="https://i.ibb.co/PCdFGnR/image.png" width="50%">
+    <img src="/media/trig3.png" width="50%">
 </center>
 
 Along with those three functions, we also have $\csc(\theta) = \frac{1}{\sin(\theta)}$, $\sec(\theta) = \frac{1}{\cos(\theta)}$ and $\cot(\theta) = \frac{1}{\cot(\theta)}$. They exist for historical reasons because of function tables. We really only need $\sin$ and $\cos$.
@@ -35,7 +35,7 @@ Along with those three functions, we also have $\csc(\theta) = \frac{1}{\sin(\th
 #### Sine Rule
 
 <center>
-    <img src="https://i.ibb.co/0t1zDfb/image.png">
+    <img src="/media/trig4.png">
 </center>
 
 $\frac{\sin(\alpha)}{A} = \frac{\sin(b)}{B}$
@@ -51,7 +51,7 @@ $\sin(\alpha+\beta) = \sin(\alpha) \cos(\beta) +  \cos(\alpha) \sin(\beta)$
 Proof:
 
 <center>
-    <img src="https://i.ibb.co/C9PhcZR/image.png">
+    <img src="/media/trig5.png">
 </center>
 
 In the above diagram, we have $\frac{A+B}{\sin(\alpha+\beta)} = \frac{L}{\sin(\theta)}$ by sine rule and $A = L \sin(\alpha)$ by the definition of $\sin$.
@@ -92,7 +92,7 @@ If we write $u = \alpha + \beta$ and $v = \alpha-\beta$ above, then $\alpha = \f
 Similarly, we have $\arccos : [-1,1] \to [0, \frac \tau 2]$ and $\arctan : \mathbb{R} \to [-\frac \tau 4, \frac \tau 4]$.
 
 <center>
-    <img src="https://i.ibb.co/x88mVrz/image.png" width="60%">
+    <img src="/media/trig6.png" width="60%">
 </center>
 
 The graphs in green, purple and red are respectively $\arcsin$, $\arccos$ and $\arctan$.
@@ -112,7 +112,7 @@ Since $\lim\limits_{h \to 0} \cos(h)  = 1$, we have  $\frac{d}{dx} \sin(x) = \li
 Now, we will need to find $\lim\limits_{h \to 0} \frac{\sin(h)}{h}$. 
 
 <center>
-    <img src="https://i.ibb.co/rcnYtwT/image.png" width="50%">
+    <img src="/media/trig7.png" width="50%">
 </center>
 
 In the above diagram, the area of triangle $ABC$, sector $ABC$ and triangle $ABD$ are $\frac 12 \sin (x)$, $\frac12 x$ and $\frac{1}{2} \tan (x)$ respectively.
@@ -158,7 +158,7 @@ Therefore, $\frac{d}{dx} f^{-1}(x) = \frac{1}{f'(f^{-1}(x))}$.
 So, we have $\frac{d}{dx} \arcsin(x) = \frac{1}{\cos(\arcsin(x))}$.
 
 <center>
-    <img src="https://i.ibb.co/MsWsR2t/image.png">
+    <img src="/media/trig8.png">
 </center>
 
 In the above diagram, $\cos(\arcsin(x)) = \cos(\theta) = \sqrt{1-x^2}$
@@ -172,7 +172,7 @@ Similarly, $\frac{d}{dx} \arccos(x) = \frac{1}{- \sin(\arccos(x))} = - \frac{1}{
 $\frac{d}{dx} \arctan(x) = \cos^2(\arctan(x))$
 
 <center>
-    <img src="https://i.ibb.co/fpdRC05/image.png">
+    <img src="/media/trig9.png">
 </center>
 
 In the above diagram, $\cos^2(\arctan(x)) = \cos^2(\theta) = \frac{1}{1+x^2}$
