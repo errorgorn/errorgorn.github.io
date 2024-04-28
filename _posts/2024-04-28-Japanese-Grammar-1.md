@@ -89,7 +89,7 @@ An annoying exception is the adjective いい which was originally 良い (よ�
 
 Note that some adjectives are compounds with suffix いい like かっこいい, so their conjugation table is also affected.
 
-### Adverbs
+#### Adverbs
 
 Adjectives can be changed into adverbs using conjugation. Unlike adjectives, adverbs do not have any tenses.
 
