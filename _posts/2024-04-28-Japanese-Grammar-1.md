@@ -19,7 +19,7 @@ Note that the conjugations below are non-敬語, unlike most textbooks which use
 | Non-Past | X(だ)    | Xじゃない     |
 | Past     | Xだった  | Xじゃなかった |
 
-The positive non-past state of being has the optional conjugation. It seems that **usually** males do use it and females don.
+The positive non-past state of being has the optional conjugation. It seems that **usually** males do use it and females don't.
 
 #### Verbs
 
