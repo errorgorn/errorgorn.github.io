@@ -163,7 +163,7 @@ Denote the normal distribution as $X \sim N(\mu, \sigma)$, which is defined as $
 Note that analytically solving for $\int e^{-x^2} \, dx$ is very hard, people used to use precomputed tables of the cdf of the standard normal distribution. Now, we just use GC.
 
 <center>
-  <img src="https://cdn.discordapp.com/attachments/752406106009239585/1232731453213904896/Distribution_14.png?ex=662b2ee1&is=6629dd61&hm=6a90f7e2694b913d037d7c7b9f4012ae8f9fc3db9787c6a93f08050f04928b16&" width="50%">
+  <img src="https://i.ibb.co/b6HydG5/image.png" width="50%">
 </center>
 
 The standard normal distribution look like that. There is the **empirical rule**, also known as the 68-95-99 rule, which states the probability of being having $1 \sigma$, $2\sigma$ and $3\sigma$ deviation respectively.
@@ -270,5 +270,5 @@ Given an ogf $F(z)$ describing a discrete distribution $X$ where $F(z) = \sum p_
 For some weird reason, this is what right and left skew mean. It skews to the side that it tapers off to.
 
 <center>
-  <img src="https://cdn.discordapp.com/attachments/752406106009239585/1226239571520393267/1XU3Kdl521XnWHECHZ7XOaQ.png?ex=662b4bd8&is=6629fa58&hm=549caa8ae33194b98256454679d48868e5ad238b1d4053d9889506b069d90d33&" width="50%">
+  <img src="https://i.ibb.co/dbqhqGQ/image.png" width="50%">
 </center>
