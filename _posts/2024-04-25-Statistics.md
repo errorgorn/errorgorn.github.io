@@ -154,7 +154,7 @@ The standard normal distribution has the $p(x) = e^{-x^2}$, without scaling.
 
 $\int_{- \infty}^{\infty} e^{-x^2} \, dx = \sqrt{\int_{- \infty}^{\infty} e^{-x^2} \, dx \cdot \int_{- \infty}^{\infty} e^{-y^2} \, dy} = \sqrt{\iint_{\mathbb{R}^2} e^{-(x^2+y^2)} \, dx \,dy} = \sqrt{\int_0^\infty \int_0^\tau r e^{-r^2} \,d\theta \, dr} = \sqrt{\tau \int_0^\infty r e^{-r^2} \, dr} = \frac{\sqrt \tau}{\sqrt 2}$.
 
-We can also compute the standard deviation as $\int _ {-\infty}^{\infty} x^2 \cdot e^{-x^2} \, dx = ([-\frac{x}{2} \cdot e^{-x^2}\] _ {-\infty}^{\infty} + \int _ {-\infty}^{\infty} \frac{1}{2} \cdot e^{-x^2} \, dx) = \frac{\sqrt \tau}{2 \sqrt 2}$.
+We can also compute the variance as $\int _ {-\infty}^{\infty} x^2 \cdot e^{-x^2} \, dx = ([-\frac{x}{2} \cdot e^{-x^2}\] _ {-\infty}^{\infty} + \int _ {-\infty}^{\infty} \frac{1}{2} \cdot e^{-x^2} \, dx) = \frac{\sqrt \tau}{2 \sqrt 2}$.
 
 Therefore, the pdf of a standard normal distribution has the form $\frac{1}{\sqrt{\tau}} e^{-\frac{x^2}{2}}$. It has $\mu=0$ and $\sigma=1$.
 
