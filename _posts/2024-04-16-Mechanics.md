@@ -1,8 +1,8 @@
 ---
-tags: notes physics
+tags: notes
 ---
 
-## Mechanics
+## AP Physics C Mech Crib Notes
 
 ### Kinematics
 
