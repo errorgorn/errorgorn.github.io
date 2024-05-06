@@ -20,6 +20,8 @@ description: "Collection of Random Shit" # This will show up in places like twit
 #########################################################################################
 theme: "minima"
 
+timezone: Asia/Singapore
+
 rss: rss
 
 kramdown:
