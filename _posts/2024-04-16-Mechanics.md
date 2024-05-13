@@ -76,8 +76,20 @@ The force of gravity between two objects is $F = \frac{GMm}{r^2}$. Note that we 
 
 Earlier, we defined an object to have GPE. But to be more precise, GPE is a quantity that exists between a system of two objects. As convention, we define the GPE of two objects infinitely far apart to be $0$. Then, then GPE of two objects is $\int_{\infty}^R \frac{GMm}{r^2} \, dr = -\frac{GMm}{r}$. It is fine that GPE is negative. This is because we only care about the relative change in energy. Indeed, for GPE defined earlier, we consider the GPE to be $0$ when we have $r = r_{\text{earth}}$, we also use the approximation $\frac{GMm}{r} - \frac{GMm}{r+h} = \frac{GMm h}{r(r+h)} \approx m \cdot \frac{GM}{r^2} \cdot h = mgh$ Indeed for translational KE, it is dependent on our frame of reference. If the observer moves, the KE will also change.
 
+### Circular Orbit
+
+From circular motion, we know that $a = \frac{v^2}{r}$, therefore, $\frac{GMm}{r^2} = F = \frac{mv^2}{r}$, which simplifies into $GM=v^2r$. 
+
+### Elliptical Orbit
+
+Kepler's Laws:
+
+- Kepler's First Law: The orbit forms an ellipse with one of the foci points is the sun
+- Kepler's Second Law: a line between the sun and the planet sweeps out an equal area over an equal time interval, proof by conservation of angular momentum
+- Kepler's Third Law: square of planet's orbital period is proportional to cube of length of semi-major axis of orbit, proof can be guessed by solving for circular orbits
+
 ### Conservation rules
 
-Energy and momentum are conserved, they can be spammed for equations. Note that the system must be closed. For example, a human pushing a ball does not violate COE as the human has stored potential energy to activate muscles. Another example is a ball bouncing on the ground. COM does not hold as we did not consider the change in momentum of the ground (the earth).
+Momentum is **always** conserved, it can be spammed for equations. Energy may **not** be conserved, never assumed that it is conserved. Note that the system must be closed for conservation rules to work. For example, a human pushing a ball does not violate COE as the human has stored potential energy to activate muscles. Another example is a ball bouncing on the ground. COM does not hold as we did not consider the change in momentum of the ground (the earth).
 
 Note that for COAM, angular momentum is conserved around a single axis. For example, if you bring $2$ spinning disks together, the angular momentum about their respective axis will not add up. Instead you should choose a specific axis and consider the other's AM about that axis using the full form of the angular moment formula $\vec L = \vec R \times m \vec v_{\text{CM}} + I_{\text{CM}} \vec \omega$. Note that for a ball moving in a straight line, COAM is also preserved, as $\lvert \vec L \rvert = \lvert \vec R \times m \vec v \rvert = m \lvert \vec R \rvert \lvert \vec v \rvert \sin \theta = m \lvert \vec v \rvert \lvert R_{\perp} \rvert$.
