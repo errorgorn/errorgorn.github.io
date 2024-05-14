@@ -4,7 +4,7 @@ tags: misc
 
 ## Elliptical Orbits
 
-I couldn't solve the below problem so I will now write a blog post about elliptical orbits. Thank you to nor for discussing this with me. You can find his blog at <https://nor-blog.surge.sh/>.
+I couldn't solve the below problem which is found in the [AP Phys C: Mech 2012 Practice Exam](https://apcentral.collegeboard.org/media/pdf/ap-physics-c-mechanics-practice-exam-2012.pdf) so I will now write a blog post about elliptical orbits.
 
 ![ ](/media/elliptical_orbit.jpg)
 
@@ -18,7 +18,7 @@ Alternatively, the ellipse can also be viewed as a stretched circle with the equ
 
 To verify that it is an ellipse, we will have to verify that $\sqrt{(a \cos \theta + \sqrt{a^2-b^2})^2 + (b \sin \theta)^2} + \sqrt{(a \cos \theta - \sqrt{a^2-b^2})^2 + (b \sin \theta)^2} = 2a$.
 
-$\begin{align}\sqrt{(a \cos \theta \pm \sqrt{a^2-b^2})^2 + (b \sin \theta)^2} &= \sqrt{a^2 \cos^2\theta \pm 2a\sqrt{a^2-b^2} \cos \theta + a^2-b^2 + b^2 \sin^2 \theta} \\ &= \sqrt{a^2 \cos^2\theta \pm 2a\sqrt{a^2-b^2} \cos \theta + a^2 - b^2 \cos^2 \theta} \\ & = \sqrt{(a^2-b^2) \cos^2\theta \pm 2a\sqrt{a^2-b^2} \cos \theta + a^2}  \\ &= a \pm \sqrt{a^2 - b^2} \cos \theta \end{align}$
+$\begin{align}\sqrt{(a \cos \theta \pm \sqrt{a^2-b^2})^2 + (b \sin \theta)^2} &= \sqrt{a^2 \cos^2\theta \pm 2a\sqrt{a^2-b^2} \cos \theta + a^2-b^2 + b^2 \sin^2 \theta} \\\\ &= \sqrt{a^2 \cos^2\theta \pm 2a\sqrt{a^2-b^2} \cos \theta + a^2 - b^2 \cos^2 \theta} \\\\ & = \sqrt{(a^2-b^2) \cos^2\theta \pm 2a\sqrt{a^2-b^2} \cos \theta + a^2}  \\\\ &= a \pm \sqrt{a^2 - b^2} \cos \theta \end{align}$
 
 Therefore, the original statement is clearly true.
 
@@ -53,4 +53,30 @@ Therefore, we have $d_- \cdot  \overrightarrow{F_+R} + d_+ \cdot  \overrightarro
 
 ### Kepler's Second Law
 
-Firstly, from Kepler's second law, we know that the line between the sun and the planet sweeps out an equal area over an equal time interval. The proof of this 
+Thank you to nor for discussing this part with me. You can find his blog at <https://nor-blog.codeberg.page/>.
+
+Firstly, from Kepler's second law, we know that the line between the sun and the planet sweeps out an equal area over an equal time interval. The proof of this is through angular momentum.
+
+Let $x_{CM}$ be the position of the center of mass of the entire system. The center of mass is somewhere on the line between the sun and the planet. By conversation of angular momentum, $I \omega$ is a constant value. $I\omega = mr^2 \cdot \frac{v}{r} = mvr$, which is proportional to $vr$.
+
+![ ](/media/elliptical_orbit2.png)
+
+But we need to be careful about this $v$ value here. It is not refering to the actual velocity $v$ in the diagram above but actually the perpendicular component of the velocity $v_\perp$ only. For most points, $v \neq v_\perp$. The only $2$ points where $v = v_\perp$ are those points that are on the line between the $2$ foci of the ellipse, which just happen to be the $2$ points given in the AP question above.
+
+### Total Energy of Planet
+
+Let us assume that the mass of the sun is much larger than the mass of the planet.
+
+By conservation of energy, we know that $\frac{1}{2} mv^2 - \frac{GMm}{r}$ is a constant.
+
+![ ](/media/elliptical_orbit3.png)
+
+Suppose that the distance from the sun to points $1$ and $2$ respectively are $a$ and $b$ respectively. From earlier, we know that $v_1r_1 = v_2r_2$.
+
+Therefore, $\frac{1}{2} mv_1^2 - \frac{GMm}{r_1} = \frac{1}{2} mv_2^2 - \frac{GMm}{r_2} = \frac{1}{2} m(\frac{a}{b}v_1)^2 - \frac{GMm}{\frac{b}{a} r_1}$.
+
+$\frac{1}{2} (1-(\frac{a}{b})^2) v_1^2 = \frac{GM}{r_1} (1 - \frac{a}{b})$, so that $\frac{1}{2} v_1^2 = \frac{GM}{r_1} \frac{1}{1+\frac{a}{b}}$.
+
+We obtain $\frac{1}{2} mv_1^2 - \frac{GMm}{r_1} =  \frac{GMm}{r_1} (\frac{1}{1+\frac ab} -1) = \frac{GMm}{r_1} (\frac{-a}{a+b}) = -\frac{GMm}{a+b}$.
+
+Recall that the total energy of a circular orbit is $ - \frac{GMm}{2r}$. Observe that if we take $r$ as the semi-major axis, then this equation holds for ellipses.
