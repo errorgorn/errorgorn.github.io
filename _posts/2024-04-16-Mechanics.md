@@ -60,7 +60,7 @@ A ball can roll without slipping on a frictionless surface if it has constant ve
 
 ### Simple Harmonic Motion
 
-Simple harmonic motion (SHM) happens when the restoring force of a system is linear to its displacement. The two instances where this is studied are springs and pendulums. In springs, the restoring force is $kx$, while in a pendulum, the restoring force is $mg \sin \theta \approx mg \theta$. For pendulums, we will use the small angle approximation so that the system becomes SHM.
+Simple harmonic motion (SHM) happens when the restoring force of a system is linear to its displacement. The two instances where this is studied are springs and pendulums. In springs, the restoring force is $kx$, while in a pendulum, the restoring force is $mg \sin \theta \approx mg \theta$. For pendulums, we will use the small angle approximation so that the system becomes SHM. The differential equation setup is $ma = m \ddot x = - kx$.
 
 The ODE $a(t) = \frac{d^2}{dx^2} x(t)= - \omega^2 \cdot x(t)$ for some $c$ describes the SHM system. A solution to this ODE is $x(t) = b_1 \sin(\omega t + b_2)$. We find that $v(t) =\omega b_1 \cos(\omega t + c_2)$ and $a(t) = - \omega^2 b_1 \sin(\omega t + c_2) = - \omega^2 \cdot x(t)$.
 
