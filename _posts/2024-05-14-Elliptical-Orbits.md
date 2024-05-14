@@ -22,11 +22,24 @@ $\begin{align}\sqrt{(a \cos \theta \pm \sqrt{a^2-b^2})^2 + (b \sin \theta)^2} &=
 
 Therefore, the original statement is clearly true.
 
-There is a video on numberphile about elliptical pool tables, where hitting a ball from one foci to will always allow the ball to go to the other foci.
+The eccentricity of the ellipse is defined as $e = \sqrt{1 - \frac{b^2}{a^2}}$. Notice that for a circle, $e=0$. As $e$ increases to $1$, the ellipse gets more stretched.
 
-<iframe src="https://youtu.be/4KHCuXN2F3I"> </iframe>  
+### Focus-to-Focus Property of Ellipses
 
-Here is proof by bashing synthetic geometry.
+Ellipses have a focus to focus property, where if a pool table was elliptical, a ball released on one focal point will always pass through the other focal point. In other words, for a point $P$ on the ellipse, the normal at point $P$ bisects the lines $\overline{PF_1}$ and $\overline{PF_2}$.
+
+The classic analytic geometry proof is below. Let the ellipse be defined by the points whose sum of distances from $F_1$ and $F_2$ is $2a$.
+
+![ ](ellipse2.png)
+
+1. Construct point $L$ which is the extension from of the line $\overline{PF_1}$ such that $\lvert \overline{PL}\rvert = \lvert \overline{PF_2}\rvert$.
+2. Construct line $w$ that is perpendicular to the bisector of $\angle F_1PF_2$. $\omega$ is a angle bisector of $\angle F_2PL$.
+3. We will show that the intersection of $w$ with the ellipse is only a single point, so that $w$ is tangent to the ellipse.
+4. Choose a point $Q$ that is not equal to $P$. $\lvert \overline{QF_1} \rvert + \lvert \overline{QF_2}\rvert = \lvert \overline{QF_1} \rvert + \lvert \overline{QL}\rvert > \lvert \overline{F_1L}\rvert  = 2a$, where the last inequality is due to triangle inequality.
+5. Since $\lvert \overline{QF_1} \rvert + \lvert \overline{QF_2}\rvert > 2a$, $Q$ is outside the ellipse.
+6. Therefore, $w$ is tangent to the ellipse and the normal at point $P$ indeed bisects the lines $\overline{PF_1}$ and $\overline{PF_2}$.
+
+Here is proof by bashing synthetic geometry because why not. We will assume that we are working with the equation $(\frac xa)^2 + (\frac yb)^2 = 1$.
 
 Suppose that the ball strikes the surface at angle $\theta$ from the origin, which is at point $R = (a \cos \theta, b \sin \theta)$.
 
