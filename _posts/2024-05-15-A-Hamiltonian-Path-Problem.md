@@ -45,4 +45,10 @@ Since $\Delta = n-2$, by the pigeonhole principle, at least one of $x_1$ and $x_
 
 </details>
 
-Now, there is a related problem which I have not really spent time thinking about, what the is minimum number of edges required in a **connected** graph so that a Hamiltonian path always exists?
+<details><summary markdown="span">Open Problem I guess?</summary>
+
+What the is minimum number of edges required in a **connected** graph so that a Hamiltonian path always exists?
+
+Note that we can modify the proof of Ore's theorem to prove a graph has a non-Hamiltonian path if for as every pair of non-adjacent vertices, the sum of their degrees is at least $n-1$.
+
+</details>
