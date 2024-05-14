@@ -6,19 +6,19 @@ tags: math
 
 For MA6433 (Graph Theory), one of the tasks was to create a problem.
 
-Here is the problem I created for it: How many non-isomorphic graphs of $2022$ edges and $\binom{2021}{2}$ edges contain a Hamiltonian path?
+Here is the problem I created for it: How many non-isomorphic graphs of $1 \leq n \leq 2022$ edges and $\binom{n-1}{2}$ edges contain a Hamiltonian path?
 
 <details><summary markdown="span">Solution</summary>
 
-Answer: $1$
-
-If the graph was $K_{2021} + K_1$, obviously there would not be any Hamiltonian paths since the graph is disconnected. Otherwise, we can prove that there always exists a Hamiltonian path.
+Answer: $2022$
 
 The main idea is to use Ore's theorem on a subgraph of $n-1$ vertices to obtain a Hamiltonian cycle and then perform surgery to get a Hamiltonian path. The details are not very interesting.
 
 For reference, Ore's theorem is that a simple graph with $n \geq 3$ vertices contains a Hamiltonian cycle if, for every pair of non-adjacent vertices, the sum of their degrees is at least $n$.
 
 First, check all small graphs with $n \leq 3$. From here, assume $n \geq 4$.
+
+If the graph was $K_{n-1} + K_1$, obviously there would not be any Hamiltonian paths since the graph is disconnected. Otherwise, we can prove that there always exists a Hamiltonian path.
 
 Let $v$ be the vertex with the minimum degree $\Delta$. Note that $\Delta < n-1$, or else the graph is complete.
 
