@@ -10,7 +10,7 @@ Here is the problem I created for it: How many non-isomorphic graphs of $1 \leq 
 
 <details><summary markdown="span">Solution</summary>
 
-Answer: $2022$
+Answer: $2021$
 
 The main idea is to use Ore's theorem on a subgraph of $n-1$ vertices to obtain a Hamiltonian cycle and then perform surgery to get a Hamiltonian path. The details are not very interesting.
 
