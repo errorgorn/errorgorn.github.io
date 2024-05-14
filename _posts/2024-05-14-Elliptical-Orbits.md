@@ -7,7 +7,7 @@ tags: misc
 I couldn't solve the below problem which is found in the [AP Phys C: Mech 2012 Practice Exam](https://apcentral.collegeboard.org/media/pdf/ap-physics-c-mechanics-practice-exam-2012.pdf) so I will now write a blog post about elliptical orbits.
 
 <center>
-  <img src="/media/elliptical_orbit.jpg" width="15%">
+  <img src="/media/elliptical_orbit.jpg" width="25%">
 </center>
 
 ### Definition of Ellipse
