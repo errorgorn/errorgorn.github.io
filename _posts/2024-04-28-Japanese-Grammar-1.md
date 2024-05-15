@@ -39,7 +39,7 @@ The conjugation for u-verbs are a bit more complicated. Let the verb be denoted 
 | u-verbs XY     | Negative Non-Past  | Negative Past |
 | -------------- | ------------- | ------------- |
 | Y ≠ う      | XY'ない           | XY'なかった   |
-| Y = う         | Xわない           | Xった         |
+| Y = う         | Xわない           | Xわなかった         |
 
 う negative past conjugation becomes わ becuse of sound shifts, see <https://www.tofugu.com/japanese-grammar/verb-conjugation-groups/#sound-convenience-in-conjugations->.
 
