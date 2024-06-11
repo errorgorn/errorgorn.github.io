@@ -2,7 +2,7 @@
 tags: misc
 ---
 
-## Non-Obvious Japanese Loanwords
+## Non-Trivial Japanese Loanwords
 
 Some Japanese loanwords are literal transcriptions of English loanwords. However, the ones that are not are ones that will cause trouble. There are 4 broad types:
 
