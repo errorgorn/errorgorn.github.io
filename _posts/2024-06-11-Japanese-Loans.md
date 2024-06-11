@@ -227,4 +227,5 @@ It is interesting to see how Japanese clipping absolutely butcher the English la
 | ホッチキス     | stapler                        | E. H. Hotchkiss (Company) |
 | レントゲン     | X-ray                          | Wilhelm Röntgen (Person)  |
 | マジックインキ | felt-tip pen, permanent marker | Magic Ink (Trademark)     |
+| セメダイン    | glue                            | Cemedine (Company)      |
 
