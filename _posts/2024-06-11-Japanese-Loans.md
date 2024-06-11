@@ -35,7 +35,7 @@ Here is a some (obviously non-exhaustive) examples. You could probably find more
 | アンニュイ     | boredom, feeling of weariness and dissatisfaction      | ennui           | French    |
 | イクラ         | salmon roe                                             | икра            | Russian   |
 | ノルマ         | quota, minimum requirements                            | норма           | Russian   |
-| チジミ         | jijimi                                                 | 지짐이          | Korean    |
+| チジミ         | jeon, buchimgae                                                 | 지짐이          | Korean    |
 | ポンプ         | pump                                                   | pomp            | Dutch     |
 | コック         | a cook                                                 | kok             | Dutch     |
 | ランドセル     | hard-sided backpack used by elementary school students | ransel          | Dutch     |
