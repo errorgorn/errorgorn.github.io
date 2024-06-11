@@ -69,6 +69,7 @@ Here is a some (obviously non-exhaustive) examples. You could probably find more
 | ノイローゼ     | neurosis                                               | neurose         | German    |
 | カルテ         | medical records                                        | karte           | German    |
 | アクリル       | acrylic                                                | acryl           | German    |
+| オナニー       | masturbation                                                | onanie           | German    |
 | チャーシュー   | cha shu                                                | 叉燒            | Cantonese |
 | シューマイ     | siew mai                                               | 燒賣            | Cantonese |
 
