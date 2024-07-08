@@ -46,4 +46,4 @@ notes:
 - I seem to separate voiced and unvoiced phonemes by aspiration in both languages
 - I do not distinguish [w] and [ʍ], so witch and which are pronounced with [w]
 - I do not retroflex in Chinese, so [ʂ], [ɻ] and [ʈ͡ʂ] becomes [ʃ], [ɹ] and [t͡ʃ ].
-- For some strange reason for the minimal pairs which distinguish between aspirated and unaspirated, only for 肚 and 兔 does my pronunciation also distinguish between the place of articulation shifting 肚 from /tu/ to /du/, but I am not really sure
+- For some strange reason for the minimal pairs which distinguish between aspirated and unaspirated, only for 肚 and 兔 does my pronunciation also distinguish between the place of articulation shifting 肚 from [tu] to [du], but I am not really sure
