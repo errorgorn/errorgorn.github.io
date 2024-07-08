@@ -28,14 +28,15 @@ Note that the table for English is mostly taken from Fromkin's Introduction to L
 | ð    | voiced dental fricative             | **th**ou    |         |
 | s    | voiceless alveolar fricative        | **s**eal    | 四      |
 | z    | voiced alveolar fricative           | **z**eal    |         |
-| ʃ    | voiceless post-alveolar fricative   | **sh**ill   |         |
-| ʒ    | voiced post-alveolar fricative      | mea**s**ure | 是      |
+| ʃ    | voiceless post-alveolar fricative   | **sh**ill   | 是      |
+| ʒ    | voiced post-alveolar fricative      | mea**s**ure |         |
 | x    | unvoiced velar fricative            |             | 火      |
 | ɹ    | voiced alveolar approximant         | **r**eef    | 日      |
-| j    | voiced palatal approximant          | **y**ou     |         |
+| j    | voiced palatal approximant          | **y**ou     | 用      |
 | l    | voiced alveolar lateral approximant | **l**eaf    | 来      |
 | h    | unvoiced glottal fricative          | **h**eal    |         |
-| w    | voiced labial-velar approximant     | **w**itch   |         |
+| w    | voiced labial-velar approximant     | **w**itch   | 为      |
+| ɥ    | voiced label-palatal approximant    |             | 月      |
 | t͡s   | voiceless alveolar affricate        |             | 字/次   |
 | t͡ʃ   | voiceless post-alveolar affricate   | **ch**ill   | 之/吃   |
 | t͡ɕ   | voiceless alveolo-palatal affricate |             | 讲/枪   |
