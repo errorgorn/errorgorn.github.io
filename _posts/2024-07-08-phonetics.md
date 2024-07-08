@@ -8,6 +8,8 @@ These are the sounds of several phonemes in the way I pronounce English/Chinese.
 
 Note that for Chinese, "X/Y" denotes that X is unaspirated whereas Y is aspirated, since Chinese distinguishes between aspiration.
 
+Note that the table for English is mostly taken from Fromkin's Introduction to Language.
+
 | IPA  | Name                                | English     | Chinese |
 | ---- | ----------------------------------- | ----------- | ------- |
 | p    | voiceless bilabial plosive          | **p**ill    | 棒/胖   |
@@ -34,7 +36,7 @@ Note that for Chinese, "X/Y" denotes that X is unaspirated whereas Y is aspirate
 | l    | voiced alveolar lateral approximant | **l**eaf    | 来      |
 | h    | unvoiced glottal fricative          | **h**eal    |         |
 | w    | voiced labial-velar approximant     | **w**itch   |         |
-| t͡s   | voiceless alveolar affricate        |             | 子/次   |
+| t͡s   | voiceless alveolar affricate        |             | 字/次   |
 | t͡ʃ   | voiceless post-alveolar affricate   | **ch**ill   | 之/吃   |
 | t͡ɕ   | voiceless alveolo-palatal affricate |             | 讲/枪   |
 | d͡ʒ   | voiced post-alveolar affricate      | **j**eez    |         |
