@@ -14,8 +14,8 @@ Note that the table for English is mostly taken from Fromkin's Introduction to L
 | ---- | ----------------------------------- | ----------- | ------- |
 | p    | voiceless bilabial plosive          | **p**ill    | 棒/胖   |
 | b    | voiced bilabial plosive             | **b**ill    |         |
-| t    | voiceless alveolar plosive          | **t**ill    | 兔      |
-| d    | voiced alveolar plosive             | **d**ill    | 肚      |
+| t    | voiceless alveolar plosive          | **t**ill    | 肚/兔   |
+| d    | voiced alveolar plosive             | **d**ill    |         |
 | k    | voiceless velar plosive             | **k**ill    | 干/看   |
 | g    | voiced velar plosive                | **g**ill    |         |
 | ʔ    | glottal stop                        | uh**-**oh   |         |
@@ -39,7 +39,6 @@ Note that the table for English is mostly taken from Fromkin's Introduction to L
 | ɥ    | voiced label-palatal approximant    |             | 月      |
 | t͡s   | voiceless alveolar affricate        |             | 字/次   |
 | t͡ʃ   | voiceless post-alveolar affricate   | **ch**ill   | 之/吃   |
-| t͡ɕ   | voiceless alveolo-palatal affricate |             | 讲/枪   |
 | d͡ʒ   | voiced post-alveolar affricate      | **j**eez    |         |
 
 notes:
@@ -47,4 +46,4 @@ notes:
 - I seem to separate voiced and unvoiced phonemes by aspiration in both languages
 - I do not distinguish [w] and [ʍ], so witch and which are pronounced with [w]
 - I do not retroflex in Chinese, so [ʂ], [ɻ] and [ʈ͡ʂ] becomes [ʃ], [ɹ] and [t͡ʃ ].
-- For some strange reason for the minimal pairs which distinguish between aspirated and unaspirated, only for 肚 and 兔 does my pronunciation also distinguish between the place of articulation shifting 肚 from [tu] to [du], but I am not really sure
+- All avolo-palatal consonants (西 [ɕ], 讲 [t͡ɕ], 枪 [t͡ɕʰ]) have been shifted to aveolar ([s], [t͡s], [t͡sʰ])
