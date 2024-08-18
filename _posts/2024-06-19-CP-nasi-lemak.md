@@ -1,5 +1,5 @@
 ---
-tags: misc
+tags: food
 ---
 
 ## Chong Pang Nasi Lemak
