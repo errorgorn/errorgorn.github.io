@@ -1,2 +1,2 @@
-學而不思則罔  
-思而不學則殆
+If I had more time
+I would have written a shorter post
