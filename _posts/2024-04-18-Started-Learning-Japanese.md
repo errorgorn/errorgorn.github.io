@@ -33,8 +33,8 @@ I wrote down the shiritori game terms and the English translation so here it is:
 酸素 eighth element
 ソナタ tetratonon 
 種植え natura
-空気 aria
-大気圏 atmosphere
+空気(エア) aria
+大気圏(アトモスフィア) atmosphere
 闇弱 erratic (wrong?)
 クーロン力 columb forc
 ```
