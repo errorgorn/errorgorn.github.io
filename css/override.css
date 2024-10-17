@@ -5,6 +5,8 @@ hr {
 
 article {
   font-size: 13px;
+  background: RGB(255,255,255,0.8);
+  padding: 20px;
 }
 
 /* Post navigation links */
