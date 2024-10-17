@@ -18,6 +18,6 @@ I didn't know about this when eating so I had like 400g of karubi left when the 
   <img src="/media/yknk1.jpg" width="50%">
 </center>
 
-I think this is one of the few buffets where you will actually stop eating because of the timer, because the grill provided at yakiniku like is really small. I only managed to fit 4 pieces of karubi on the grill at a time. And you are forced to clear the initial serving of chicken which takes infinite time to clear.
+I think this is one of the few buffets where you will actually stop eating because of the timer, because the grill provided at yakiniku like is really small. I only managed to fit 4 pieces of karubi on the grill at a time. And you are forced to clear the initial serving of chicken which takes forever to cook, and I'm not risking getting salmonella.
 
 While I definitely had more space if there was more time, it was still crazy good value. I think I managed to eat more than 1.5kg of meat? I would definitely come again. I feel like I scammed them.
