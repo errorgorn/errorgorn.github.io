@@ -28,7 +28,7 @@ Let's consider that the cat and mouse are instead playing on the graph of $K_4$ 
 
 When will the cat eat the mouse now? It is when $v_c > v_m$.
 
-<details style="background-color:powderblue"><summary markdown="proof">Some rambling</summary>
+<details style="background-color:powderblue"><summary markdown="span">Proof</summary>
 
 Suppose that $v_c > v_m$. Now, the strategy for the cat is to first take any path to the **initial** position of the mouth and then mirror its move. The cat will eventually end up in the end position as the mouse.
 
