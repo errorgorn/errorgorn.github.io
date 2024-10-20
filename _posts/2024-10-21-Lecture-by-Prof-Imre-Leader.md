@@ -44,7 +44,7 @@ Ok that was not *that* interesting as well. What if there were two cats? Well, o
 
 It turns out that if the two cats have speeds $v_{c_1} = \frac{v_m}{2}$ and $v_{c_2} = \epsilon$, it is enough to catch the mouse!
 
-<details style="background-color:powderblue"><summary markdown="proof">Some rambling</summary>
+<details style="background-color:powderblue"><summary markdown="span">Proof</summary>
 Let's ignore cat $c_2$ for now.
 
 First, choose some edge of the tetrahedron $AB$. Cat $c_1$ will say that he will only stay on that edge. We will embed the rest of the tetrahedron onto $AB$. Let $M$ be the midpoint of edge $AB$. Then we will embed edges $AC$ and $AD$ into $AM$, edges $BC$ and $BD$ into $BM$ and $CD$ into $MM$.
@@ -67,7 +67,7 @@ Now, we will look at a totall different class of games. There is a regular $n$-g
 
 Now, $n$ wolves is enough.
 
-<details style="background-color:powderblue"><summary markdown="proof">Some rambling</summary>
+<details style="background-color:powderblue"><summary markdown="span">Proof</summary>
 
 We will ask each wolf to stay on a single side of the $n$-gon such that if the man tries to escape from that side of the $n$-gon, the wolf will stop him from doing so.
 
@@ -89,7 +89,7 @@ Now, is this optimal? For $n \leq 4$, there is a simple proof for this.
 
 Note that this proofs below are mine. Prof Leader did not go through the proof during this lecture cause he said it was "by geometry or something".
 
-<details style="background-color:powderblue"><summary markdown="proof for $n=3$">Some rambling</summary>
+<details style="background-color:powderblue"><summary markdown="span">Proof for $n=3$</summary>
 
 Let's look at the simpler case of $n=3$ and show that the man can escape when there are $2$ wolves.
 
@@ -103,7 +103,7 @@ If we let the distance between an good point and the center be $1$, then the dis
 
 </details>
 
-<details style="background-color:powderblue"><summary markdown="proof for $n=4$">Some rambling</summary>
+<details style="background-color:powderblue"><summary markdown="span">Proof for $n=4$</summary>
 
 Does the proof for $n=3$ work for $n=4$? No. This is because now a single wolf can guard $2$ of the $4$ good points instead. So our proof technique cannot even prove that we need at least $3$ wolves for $n=4$.
 
@@ -129,7 +129,7 @@ Turns out that no finite number of wolves suffices for this case.
 
 Even more crazier, no countably infinite number of wolves suffices....
 
-<details style="background-color:powderblue"><summary markdown="proof$">Some rambling</summary>
+<details style="background-color:powderblue"><summary markdown="span">Proof</summary>
 
 This proof is super handwavy.
 
