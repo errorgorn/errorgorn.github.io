@@ -207,11 +207,11 @@ Prof Leader provided the following proofs:
 
 $\sum t_i$ is the [harmonic sum problem](https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)#Partial_sums) which we know grow at around $\log n$.
 
-$\begin{align} &\frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} +  \frac{1}{6} + \frac{1}{7} + \frac{1}{8} + \ldots \\ \geq& 1 + \frac{1}{2} + (\frac{1}{4} + \frac{1}{4}) + (\frac{1}{8} +\frac{1}{8} +\frac{1}{8} +\frac{1}{8} ) + \ldots \\ =& 1 + \frac{1}{2} + \frac{1}{2}+ \frac{1}{2} + \ldots = \infty \end{align}$
+$\begin{align} &\frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} +  \frac{1}{6} + \frac{1}{7} + \frac{1}{8} + \ldots \\\\ \geq& 1 + \frac{1}{2} + (\frac{1}{4} + \frac{1}{4}) + (\frac{1}{8} +\frac{1}{8} +\frac{1}{8} +\frac{1}{8} ) + \ldots \\\\ =& 1 + \frac{1}{2} + \frac{1}{2}+ \frac{1}{2} + \ldots = \infty \end{align}$
 
 $\sum t_i^2$ is the [Basel problem](https://en.wikipedia.org/wiki/Basel_problem) which we know is $\frac{\pi^2}{6}$, but there is a much simpler proof that it converges. For reference for the answer to Basel problem, I like [3b1b's video on it](https://youtu.be/d-o3eB9sfls).
 
-$\begin{align} &\frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \frac{1}{5^2} +  \ldots \\ \leq& 1 + \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} +\frac{1}{3 \cdot 4} +\frac{1}{4 \cdot 5} + \ldots \\ =& 1 + (\frac{1}{1}- \frac{1}{2}) + (\frac{1}{2}- \frac{1}{3}) + (\frac{1}{3}- \frac{1}{4}) + (\frac{1}{4}- \frac{1}{5}) + \ldots = 2 \end{align}$
+$\begin{align} &\frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \frac{1}{5^2} +  \ldots \\\\ \leq& 1 + \frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} +\frac{1}{3 \cdot 4} +\frac{1}{4 \cdot 5} + \ldots \\\\ =& 1 + (\frac{1}{1}- \frac{1}{2}) + (\frac{1}{2}- \frac{1}{3}) + (\frac{1}{3}- \frac{1}{4}) + (\frac{1}{4}- \frac{1}{5}) + \ldots = 2 \end{align}$
 
 Now, a interesting property of this is that we can make $t_i = \frac{\epsilon}{i}$, so the man can win as long as there is a (possibly small) neighborhood to run in.
 
