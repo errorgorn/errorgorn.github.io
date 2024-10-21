@@ -10,7 +10,7 @@ Baby Rudin gives the proof in chapter 2. This is an alternative proof based on <
 
 Let the $ 1$-cell be $ [a,b] $.
 
-Define the set $ S = \{ x \in [a,b] \mid [a,x] \text{ has a finite subcover} \} $.
+Define the set $ S = \\{ x \in [a,b] \mid [a,x] \text{ has a finite subcover} \\} $.
 
 Now, the set is not empty as $ a \in S $ and the set is also bounded above by $ b $, therefore $ \text{sup}(S) $ exists.
 
