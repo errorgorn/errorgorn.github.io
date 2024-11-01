@@ -224,7 +224,9 @@ Anyways, we realized we couldn't salvage the proof for 4, so we just submitted t
 
 For 6, I suddenly realized how to solve it with 10 minutes left. I asked dantoh for his partially written solution for 6 and quickly appended proof of lower bound. I left out a lot of details and calculations because we were out of time and I submitted it 1 minute before the contest ended. Miraculously, they awarded the proof full score (even though 1 was marked down...).
 
-Below are the solutions we submitted. You can judge whether 1 should be marked down while 6 has perfect score
+Below are the solutions we submitted. You can judge whether 1 should be marked down while 6 has perfect score.
+
+Also, problem 5 is quite interesting to me. If you have the restriction that you want an independent set, the construction for $3^{n-1}$ is very easy. Just take all the sequences who sum is divisible by $3$. But after we relax the condition to allow each vertex to have at most $1$ neighbour, we managed to only add $1$ more vertex into the set... Surely this can't be the upper bound right? It's too cursed. But I'm too lazy to investigate further.
 
 ### 1
 
