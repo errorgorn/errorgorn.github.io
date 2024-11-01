@@ -137,11 +137,6 @@ void add(int i){
 }
 
 signed main(){
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
-    cin.exceptions(ios::badbit | ios::failbit);
-    
     rep(x,0,7) rep(y,0,7){
         rep(d1,-1,2) if (d1) rep(d2,-1,2) if (d2) if (0<=x+d1*2 && x+d1*2<7 && 0<=y+d2*2 && y+d2*2<7){
             int bm=0;
@@ -201,7 +196,7 @@ Let $c$ be the unique center of the tree. That is the unique vertex where the ma
 
 Let $S$ be the set of subtrees whose depth is $49$ and $T$ be the set of subtrees whose depth is $48$.
 
-Firstly, we show that the answer is at least $|S|-1$. To show lower bound, let the operation be to just remove the edge, the lower bound will not be higher than the original statement. Obviously, we need to cut at least one edge from all but one of the $|S|$ subtrees.
+Firstly, we show that the answer is at least $\mid S \mid -1$. To show lower bound, let the operation be to just remove the edge, the lower bound will not be higher than the original statement. Obviously, we need to cut at least one edge from all but one of the $\mid S \mid$ subtrees.
 
 Since $\lfloor \frac{2024-1}{50} \rfloor = 40$, the answer is at least $39$.
 
@@ -209,7 +204,7 @@ Now, to prove the answer is at most $39$.
 
 Case $1$: $T = \varnothing$
 
-Let the roots of the subtrees in $S$ be $s_1,s_2,\ldots,s_k$. Then for $s_2,s_3,\ldots,s_k$, delete edge $(c,s_i)$ and add edge $(s_1,s_i)$. We used $|S|-1 \leq 39$ operations.
+Let the roots of the subtrees in $S$ be $s_1,s_2,\ldots,s_k$. Then for $s_2,s_3,\ldots,s_k$, delete edge $(c,s_i)$ and add edge $(s_1,s_i)$. We used $\mid S\mid-1 \leq 39$ operations.
 
 Case $2$: $T \neq \varnothing$
 
@@ -270,10 +265,10 @@ If $n$ is even, each swapping step will perform at most $\frac{n}{2}$ swaps. How
 ### 3
 
 First, we show that the minimum $k$ is at least 6.
-We choose $A_1, A_2, A_3 \ldots A_{10}$ to be the $10$ different distinct subsets of size 3 of the set $\{1,2,3,4,5\}$.
-We choose $A_{11}, A_{12}, A_{13} \ldots A_{20}$ to be the $10$ different distinct subsets of size 3 of the set $\{6,7,8,9,10\}$.
-Suppose the covering subset has less than $3$ elements in $\{1,2,3,4,5\}$, then there exists a subset in $A_1, A_2, A_3 \ldots A_{10}$ that is not covered.
-Similarly, suppose the covering subset has less than $3$ elements in $\{6,7,8,9,10\}$, then there exists a subset in $A_{11}, A_{12}, A_{13} \ldots A_{20}$ that is not covered.
+We choose $A_1, A_2, A_3 \ldots A_{10}$ to be the $10$ different distinct subsets of size 3 of the set $\\{1,2,3,4,5\\}$.
+We choose $A_{11}, A_{12}, A_{13} \ldots A_{20}$ to be the $10$ different distinct subsets of size 3 of the set $\\{6,7,8,9,10\\}$.
+Suppose the covering subset has less than $3$ elements in $\\{1,2,3,4,5\\}$, then there exists a subset in $A_1, A_2, A_3 \ldots A_{10}$ that is not covered.
+Similarly, suppose the covering subset has less than $3$ elements in $\\{6,7,8,9,10\\}$, then there exists a subset in $A_{11}, A_{12}, A_{13} \ldots A_{20}$ that is not covered.
 Hence, a minimum of $3+3=6$ elements are required in $S$
 
 
@@ -326,17 +321,17 @@ All arithmetic in this solution are taken under modulo $n$.
 
 
 
-Lemma $1$: Consider the set of vertices $\{x,x+1,x+2,x+3\}$. We claim that $S$ should contain at most $2$ elements from this set. 
+Lemma $1$: Consider the set of vertices $\\{x,x+1,x+2,x+3\\}$. We claim that $S$ should contain at most $2$ elements from this set. 
 
 Proof: Suppose that $S$ contains $3$ elements from this set, which we call $a < b < c$. We have $b-a \leq 2$ and $c-b \leq 2$, so that $b$ is adjacent to both $a$ and $c$, which is not allowed. $\blacksquare$
 
 
 
-If $n=1$,  $S=\{1\}$ and $f(G)=1$.
+If $n=1$,  $S=\\{1\\}$ and $f(G)=1$.
 
-If $n=2$, $S=\{1,2\}$ and $f(G)=2$.
+If $n=2$, $S=\\{1,2\\}$ and $f(G)=2$.
 
-If $n=3$, $S=\{1,2\}$ and $f(G)=2$. We cannot have $f(G)=3$ or else $S=\{1,2,3\}$, violating lemma 1.
+If $n=3$, $S=\\{1,2\\}$ and $f(G)=2$. We cannot have $f(G)=3$ or else $S=\\{1,2,3\\}$, violating lemma 1.
 
 Otherwise now suppose that $n \geq 4$.
 
@@ -348,11 +343,11 @@ By lemma $1$, $C(l,l+3 ) \leq 2$.
 
 $4f(G) = C(0,3) + C(1,4) + \ldots + C(n-2,1) + C(n-1,2) \leq 2n$. Therefore, $f(G) \leq \lfloor \frac{n}{2} \rfloor$.
 
-For $n = 0,1,3 \pmod 4$, we can find a set $S$ such that $|S| = \lfloor \frac{n}{2} \rfloor$ so that it hits our upper bound on $f(G)$.
+For $n = 0,1,3 \pmod 4$, we can find a set $S$ such that $\mid S\mid = \lfloor \frac{n}{2} \rfloor$ so that it hits our upper bound on $f(G)$.
 
-- $n = 0 \pmod 4$, $S = \{0,1,4,5,\ldots,n-4,n-3\}$, $|S| = \frac{n}{2} = \lfloor \frac{n}{2} \rfloor$.
-- $n = 1 \pmod 4$, $S = \{0,1,4,5,\ldots,n-5,n-4\}$, $|S| = \frac{n-1}{2} = \lfloor \frac{n}{2} \rfloor$.
-- $n = 3 \pmod 4$, $S = \{0,1,4,5,\ldots,n-7,n-6,n-3\}$, $|S| = \frac{n-1}{2} = \lfloor \frac{n}{2} \rfloor$.
+- $n = 0 \pmod 4$, $S = \\{0,1,4,5,\ldots,n-4,n-3\\}$, $\mid S\mid = \frac{n}{2} = \lfloor \frac{n}{2} \rfloor$.
+- $n = 1 \pmod 4$, $S = \\{0,1,4,5,\ldots,n-5,n-4\\}$, $\mid S\mid = \frac{n-1}{2} = \lfloor \frac{n}{2} \rfloor$.
+- $n = 3 \pmod 4$, $S = \\{0,1,4,5,\ldots,n-7,n-6,n-3\\}$, $\mid S\mid = \frac{n-1}{2} = \lfloor \frac{n}{2} \rfloor$.
 
 
 
@@ -360,9 +355,9 @@ Now, consider that $n \geq 6$ and $n = 2 \pmod 4$. We claim that $f(G) = \frac{n
 
 Now, to obtain $f(G) = \frac{n}{2}$, the formula $4f(G) = C(0,3) + C(1,4) + \ldots + C(n-1,2) \leq 2n$ must be tight, so that $C(l,l+3)=2$ for all $l$. Since $C(x,x+3)=C(x+1,x+4)$, we have $x \in S \leftrightarrow x+4 \in S$. Since $n=2 \pmod 4$, we also have $x \in S \leftrightarrow x+4 \in S \leftrightarrow \ldots \leftrightarrow x-2 \in S \leftrightarrow x+2 \in S$ so that $x \in S \leftrightarrow x+2 \in S$.
 
-Now, the only way that $x \in S \leftrightarrow x+2 \in S$ and $C(l,l+3)=2$ for all $l$ is for $S=\{0,2,4,\ldots,n-2\}$ or $S=\{1,3,\ldots,n-1\}$. But for we can observe both sets violate the condition of each element being adjacent to at most one other.
+Now, the only way that $x \in S \leftrightarrow x+2 \in S$ and $C(l,l+3)=2$ for all $l$ is for $S=\\{0,2,4,\ldots,n-2\\}$ or $S=\\{1,3,\ldots,n-1\\}$. But for we can observe both sets violate the condition of each element being adjacent to at most one other.
 
-Therefore, $f(G) < \frac{n}{2}$ in this case. We can hit this upper bound with $S = \{0,1,4,5,\ldots,n-6,n-5\}$, $|S| = \frac{n}{2}-1$ 
+Therefore, $f(G) < \frac{n}{2}$ in this case. We can hit this upper bound with $S = \\{0,1,4,5,\ldots,n-6,n-5\\}$, $\mid S\mid = \frac{n}{2}-1$ 
 
 
 
@@ -380,9 +375,9 @@ In summary, we have proved that:
 
 For each $n$ will construct a set $S_n$ of size exactly $3^{n-1}+1$ such that for all sequences, there is exactly one adjacent element.
 
-Our base case is $S_1 = \{(1),(2)\}$.
+Our base case is $S_1 = \\{(1),(2)\\}$.
 
-For $n \geq 1$, will construction $S_{n+1}$ using $S_n$. Let $T_n$ be sequences of length $n$ such that their sum is divisible by $3$. Then $|T_n| = 3^{n-1}$ because for each sequence of length $n-1$, there is a unique number to add to it to obtain a sequence of length $n$ whose sum is divisible by $3$.
+For $n \geq 1$, will construction $S_{n+1}$ using $S_n$. Let $T_n$ be sequences of length $n$ such that their sum is divisible by $3$. Then $\mid T_n\mid = 3^{n-1}$ because for each sequence of length $n-1$, there is a unique number to add to it to obtain a sequence of length $n$ whose sum is divisible by $3$.
 
 For each element in $S_n$, append $0$ and call it set $A$.
 
@@ -394,19 +389,19 @@ We claim that $S_{n+1} = A \cup B \cup C$ works. It should be clear that all $3$
 
 
 
-When $n=1$, we have $A=\{(1,0),(2,0)\}$, $B=\{(0,1)\}$ and $C=\{(0,2)\}$. So $S_2 = \{(1,0),(2,0),(0,1),(0,2)\}$
+When $n=1$, we have $A=\\{(1,0),(2,0)\\}$, $B=\\{(0,1)\\}$ and $C=\\{(0,2)\\}$. So $S_2 = \\{(1,0),(2,0),(0,1),(0,2)\\}$
 
-When $n=2$, we have $A=\{(1,0,0),(2,0,0),(0,1,0),(0,2,0)\}$, $B=\{(0,0,1),(1,2,1),(2,1,1)\}$ and $C=\{(0,0,2),(1,2,2),(2,1,2)\}$. So $S_3 = \{(1,0,0),(2,0,0),(0,1,0),(0,2,0),(0,0,1),(1,2,1),(2,1,1),(0,0,2),(1,2,2),(2,1,2)\}$
+When $n=2$, we have $A=\\{(1,0,0),(2,0,0),(0,1,0),(0,2,0)\\}$, $B=\\{(0,0,1),(1,2,1),(2,1,1)\\}$ and $C=\\{(0,0,2),(1,2,2),(2,1,2)\\}$. So $S_3 = \\{(1,0,0),(2,0,0),(0,1,0),(0,2,0),(0,0,1),(1,2,1),(2,1,1),(0,0,2),(1,2,2),(2,1,2)\\}$
 
 
 
-Lemma $1$: $|S_n| = 3^{n-1}+1$.
+Lemma $1$: $\mid S_n\mid = 3^{n-1}+1$.
 
 Proof: For $n=1$, $3^{1-1}+1 = 2$.
 
 For $n \geq 1$, assume the statement is true for $S_n$.
 
-$|S_{n+1}| = |S_n| + 2 \cdot 3^{n-1} = 3^{n-1} + 1 + 2 \cdot 3^{n-1} = 3^n +1$
+$\mid S_{n+1}\mid = \mid S_n\mid + 2 \cdot 3^{n-1} = 3^{n-1} + 1 + 2 \cdot 3^{n-1} = 3^n +1$
 
 By induction, the statement is true for all $n$ $\blacksquare$
 
@@ -452,9 +447,9 @@ Base cases:
 
 $n = 1: no valid moves, $f(n) = 0$
 
-$n = 2: \{1, 2\} \rightarrow \{0, 1\}, f(n) = 1$
+$n = 2: \\{1, 2\\} \rightarrow \\{0, 1\\}, f(n) = 1$
 
-$n = 3: \{1, 2, 3\} \rightarrow \{1, 0, 1\}, f(n) = 2$
+$n = 3: \\{1, 2, 3\\} \rightarrow \\{1, 0, 1\\}, f(n) = 2$
 
 Claim: $f(n) = f(n-3) + n-1$
 
@@ -466,11 +461,11 @@ Consider the largest index $1 \leq x \leq n-1$ such that $T_{x-1} > T_x < T_{x+1
 
 Then we will have $T_x<T_{x+1}<\ldots<T_{n-1}<T_{n} = \infty$.  Suppose instead that there is a $y>x$ such that $T_{y-1} > T_y$. Then there must be a $x<x'$ such that $T_{x'-1} > T_x' < T_{x'+1}$ since $T_n = \infty$. So $T_x<T_{x+1}<\ldots<T_{n-1}<T_{n} = \infty$ clearly holds.
 
-If $x=n-2$, consider last 3 elements of $\{1, 2, ... n\}$.
+If $x=n-2$, consider last 3 elements of $\\{1, 2, ... n\\}$.
 
-$\{n-2, n-1, n\} \rightarrow \{0, 1, n\} \rightarrow \{0, 0, n-1\}$ with cost $n-1$.
+$\\{n-2, n-1, n\\} \rightarrow \\{0, 1, n\\} \rightarrow \\{0, 0, n-1\\}$ with cost $n-1$.
 
-Now we have $\{1, 2, ..., n-3, 0, 0, n-1\}$ which has cost $f(n-3)$ so that $f(n) \geq f(n-3) + n -1$.
+Now we have $\\{1, 2, ..., n-3, 0, 0, n-1\\}$ which has cost $f(n-3)$ so that $f(n) \geq f(n-3) + n -1$.
 
 But if we have $x \neq n-2$, we can show that this will result in a lower value for $f(n)$.
 
