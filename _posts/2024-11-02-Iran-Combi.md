@@ -214,7 +214,7 @@ Now, the number of such vertex $v$ is at most $\lfloor \frac{2024}{49} \rfloor-2
 
 Therefore, in this case, we used $\leq 39$ operations again.
 
-<br>
+<hr>
 
 The final round went ok... at the last hour of the contest, we had solved 1,2,3,5, and had lower bound construction for 4, upper bound construction for 6 and upper bound construction for 7. I was abit pissed because we got marked down for 1, even though I see no error with the proof. Maybe it is ugly to MO peope or something
 
