@@ -322,4 +322,4 @@ $[11]$ M. X. Goemans, Lectures on Nonbipartite Matchings, <https://math.mit.edu/
 
 $[12]$ O. Kulkov, Randomized general matching with Tutte matrix, <https://codeforces.com/blog/entry/92400>
 
-$[13]$ D. B. West, A short proof of the Berge–Tutte Formula and the Gallai–Edmonds Structure Theorem, https://www.sciencedirect.com/science/article/pii/S0195669811000187
+$[13]$ D. B. West, A short proof of the Berge–Tutte Formula and the Gallai–Edmonds Structure Theorem, <https://www.sciencedirect.com/science/article/pii/S0195669811000187>
