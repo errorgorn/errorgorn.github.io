@@ -67,7 +67,7 @@ Now if the answer of this grid card game $A$, then the maximum profit from proje
 
 Now, if we want to make this analogy more general, we will want to account for those $1 \leq i \leq n$ and $1 \leq j \leq m$ such that $0 \leq A_{i,j}$. Given a grid game of size $(n+1) \times (m+1)$ where $A_{n+1,m+1} = -\infty$, this is how we can inteprete this grid game into a general form of the project selection problem.
 
-There $n$ projects with the $i$-th project giving you profit of $p_i = \sum A_{i,*}$. There are $m$ machines with the $j$-th machine has a cost of $c_j = \sum A_{*,j}$. Then for a pair of projects and machines $(i,j)$ there are two cases:
+There $n$ projects with the $i$-th project giving you profit of $p_i = \sum A_{i,\star}$. There are $m$ machines with the $j$-th machine has a cost of $c_j = \sum A_{\star,j}$. Then for a pair of projects and machines $(i,j)$ there are two cases:
 
 - If $A_{i,j}<0$, The project $i$ must buy machine $j$
 - If $A_{i,j} \geq 0$, For the project $i$, if we don't buy machine $j$, we lose $A_{i,j}$ money
@@ -147,19 +147,19 @@ I want to note here that the diagrams shown in $[8]$ and $[9]$ *might* be mislea
   <img src="/media/konig.png">
 </center>
 
-Now, with regards to our previous discussion on the project selection problem, we can note that this is the exact same problem if $X$ was projects and $Y$ were machines. The project selection problem then finds the set that maximizes $|W| - |N_G(W)|$ for all $W \subseteq X$, which is the portion of the graph that causes us to waste $|W| - |N_G(W)|$ vertices on $X$. This segues right into Hall's Theorem.
+Now, with regards to our previous discussion on the project selection problem, we can note that this is the exact same problem if $X$ was projects and $Y$ were machines. The project selection problem then finds the set that maximizes $ \mid W \mid - \mid N_G(W) \mid$ for all $W \subseteq X$, which is the portion of the graph that causes us to waste $\mid W \mid - \mid N_G(W) \mid$ vertices on $X$. This segues right into Hall's Theorem.
 
 ### Hall's Theorem
 
 We can give a proof of Hall's Theorem as a corollary of Kőnig's theorem. Let the bipartite graph have partition $(X,Y)$ and we want to find a perfect matching covering all $X$.
 
-#### $\exists W \subseteq X, ~ |W| > | N_G(W) | \to mVC < X$
+#### $\exists W \subseteq X, ~ \mid W\mid  > \mid  N_G(W) \mid  \to mVC < X$
 
 Trivially no matching.
 
-#### $mVC < X \to \exists W \subseteq X, ~ |W| > | N_G(W) |$
+#### $mVC < X \to \exists W \subseteq X, ~ \mid W\mid  > \mid  N_G(W) \mid $
 
-Suppose we have vertex cover $VC$ of size $mVC$ that is smaller than $X$. Then take $W = X \cap \overline{VC}$ and $Z = Y \cap VC$. We have $N_G(W) \subseteq Z$ or $VC$ is not a vertex cover. We also have $|Z| < |W|$ since $|VC| < |X|$. Therefore, $| N_G(W) | < |W|$.
+Suppose we have vertex cover $VC$ of size $mVC$ that is smaller than $X$. Then take $W = X \cap \overline{VC}$ and $Z = Y \cap VC$. We have $N_G(W) \subseteq Z$ or $VC$ is not a vertex cover. We also have $\mid Z\mid  < \mid W\mid$ since $\mid VC\mid <\mid X\mid$. Therefore, $\mid N_G(W) \mid < \mid W\mid$.
 
 ### Dilworth's Theorem
 
@@ -191,7 +191,7 @@ Therefore, we have proved Dilworth's theorem that $mPP = MAC$
 
 #### Kőnig's Theorem from Dilworth's Theorem
 
-Suppose we have a bipartite graph $G=(U,V,E)$. Let $sz = |U|+|V|$
+Suppose we have a bipartite graph $G=(U,V,E)$. Let $sz = \mid U\mid +\mid V\mid$
 
 Define a poset $(S,\leq)$ with $S = U \cup V$ and $u < v $ if edge $(u,v)$ exists.
 
@@ -231,7 +231,7 @@ See $[7]$ and $[10]$.
 
 Let $(X,Y)$ be the bipartite graph. Let $S$ denote the set of paths that start from a unmatched vertex in $X$ and alternates between edges in $M$ and not in $M$. There is no restriction that the path needs to end in an unmatched vertex, as in a augmenting path. Then there is an augmenting path iff there is a unmatched vertex in $Y \cap S$. It is easy to construct $S$ each time using DFS.
 
-By the way, you can prove Hall's Theorem by showing that Kuhn's always find a prefect matching, to prove $\forall W \subseteq X, ~ |W| \leq | N_G(W) | \to MM = V$. Take any free $x \in X$ and let $S$ be the set of vertices such that it is connected to $x$ by augmenting paths. Then suppose that $Y \cap S$ contains no free vertices so that we cannot augment the graph further. Then we must have $|X \cap S| \geq |Y \cap S|+1$ since all vertices in $Y \cap S$ have their corresponding matched vertex in $X \cap S$. and $X \cap S$ also contains $x$. However, by our condition for Hall's Theorem, we also have $|X \cap S| \leq |Y \cap S|$. Contradiction.
+By the way, you can prove Hall's Theorem by showing that Kuhn's always find a prefect matching, to prove $\forall W \subseteq X, ~ \mid W\mid \leq \mid  N_G(W) \mid  \to MM = V$. Take any free $x \in X$ and let $S$ be the set of vertices such that it is connected to $x$ by augmenting paths. Then suppose that $Y \cap S$ contains no free vertices so that we cannot augment the graph further. Then we must have $\mid X \cap S\mid  \geq \mid Y \cap S\mid +1$ since all vertices in $Y \cap S$ have their corresponding matched vertex in $X \cap S$. and $X \cap S$ also contains $x$. However, by our condition for Hall's Theorem, we also have $\mid X \cap S\mid  \leq \mid Y \cap S\mid $. Contradiction.
 
 ### General Matching (Blossom's Algorithm)
 
@@ -272,7 +272,7 @@ The decomposition $(A,C,D)$ is as follows:
 - $A$ is the vertices that are connected to $D$
 - $C$ is the rest of the vertices
 
-In $[13]$, let $S$ be the set we described earlier. Then the rest of the graph $T$ are all factor critical. We will shrink the components into single points and use Hall's theorem. Then, let $H$ be the maximum set of $S$ such that $|H| = |N(H)|$ is true. So that means we are able to miss any point in $T \setminus N(H)$. So $D = T \setminus N(H)$, $A = H$ and $C$ is everything else.
+In $[13]$, let $S$ be the set we described earlier. Then the rest of the graph $T$ are all factor critical. We will shrink the components into single points and use Hall's theorem. Then, let $H$ be the maximum set of $S$ such that $\mid H\mid  = \mid N(H)\mid $ is true. So that means we are able to miss any point in $T \setminus N(H)$. So $D = T \setminus N(H)$, $A = H$ and $C$ is everything else.
 
 In $[11]$, take any maximum matching $M$. $D$ is the vertices that are connected by **any** alternating path of **even** length from an unmatched vertex, $A$ is the vertices that are connected by **only** alternating paths of **odd** length and $C$ are the rest of the vertices. We want to work with the contracted graph from Blossom's algorithm because now we show that all vertices in a contracted blossom are all even. And there are also no edges between even vertices (or Blossoms). Effectively, we kind of just created the same situation as above where we contracted all components of $T$ above into single points.
 
@@ -282,7 +282,7 @@ Some properties of the $(A,C,D)$ decompositions:
 - all components in $C$ are perfectly matched in a maximum matching
 - obviously from above, $C$ and $D$ are respectively the even and odd components of $A \setminus G$
 - all vertices in $A$ are matched to some component in $D$ in a maximum matching
-- each subset $X \subseteq A$ has neighbours in at least $|X|+1$ components in $D$
+- each subset $X \subseteq A$ has neighbours in at least $\mid X\mid +1$ components in $D$
 - $A$ is a possible set that minimizes Tutte-Berge formula
 - The number of vertices that are not matched in the maximum matching is the number of components in $D$ minus the number of vertices in $A$
 
