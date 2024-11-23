@@ -143,13 +143,13 @@ Now, our constraints are as follows:
 - If $i \in Y$, then $S_{(i,v)} =\texttt{0}$ will give us a penalty of $A_{(i,v)}=1$ if $v > a_i$
 - If $i \in X$, then $S_{(i,mn_i)}=\texttt{0}$ will give us a penalty of $A_{(i,mn_i)}=\infty$
 - If $i \in Y$, then $S_{(i,mn_i)}=\texttt{1}$ will give us a penalty of $B_{(i,mn_i)}=\infty$
-- Finally if $(x,y) \in (X,Y)$ is a pair, then we have the constraint $\max(a_x,a_y) \geq b_y \iff \neg (a_x<b_y \and a_y < b_y)$ which is represented by $C_{(x,b_y),(y,b_u)} = \infty$.
+- Finally if $(x,y) \in (X,Y)$ is a pair, then we have the constraint $\max(a_x,a_y) \geq b_y \iff \neg (a_x<b_y \land a_y < b_y)$ which is represented by $C_{(x,b_y),(y,b_u)} = \infty$.
 
 ### Calculating Max-Flow using Min-Cut
 
 In the reverse of the section above, we sometimes flow graph where we are interested about the flow through the graph but computing the min-cut using ad-hoc techniques is easier.
 
-However, there are some instances where we are interested in computing the maximum flow but computing the minimum cut is simpler. I have seen this idea in<https://atcoder.jp/contests/arc125/tasks/arc125_e> and <https://codeforces.com/problemset/problem/1919/F2> only (which I coordinated). Are there any problems that require this technique?
+However, there are some instances where we are interested in computing the maximum flow but computing the minimum cut is simpler. I have seen this idea in<https://atcoder.jp/contests/arc125/tasks/arc125_e>, <https://codeforces.com/contest/724/problem/E> and <https://codeforces.com/problemset/problem/1919/F2> only (which I coordinated). Are there any problems that require this technique?
 
 ### Gallai's Theorem
 
