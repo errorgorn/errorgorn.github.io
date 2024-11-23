@@ -50,6 +50,12 @@ Take the array $[-1,2,-1,1]$.
 
 If we only take project $1$, then our only constraint is that we must buy machine $2$ and $4$. But I guess this can be fixed by saying that we can always get project $3$ for free.
 
+#### [ABC225G](https://atcoder.jp/contests/abc225/tasks/abc225_g)
+
+Using project selection, the projects are that we can save $C$ cost by placing `X` on both machines $(i,j)$ and $(i+1,j+1)$ or on both machines $(i,j)$ and $(i+1,j-1)$. 
+
+So the projects all have cost $C$ and the machine $(i,j)$ have cost $2C-A_{i,j}$ instead. Note that $2C-A_{i,j}$ might be negative, which we can handle by the above discussion about project selection with negative weights.
+
 ####  [ABC259](https://atcoder.jp/contests/abc259/tasks/abc259_g)
 
 We can actually think about this as a sort of generalization of the project selection problem. We can transform the project selection problem into this grid card game as follows.
@@ -75,12 +81,6 @@ There $n$ projects with the $i$-th project giving you profit of $p_i = \sum A_{i
 - If $A_{i,j} \geq 0$, For the project $i$, if we don't buy machine $j$, we lose $A_{i,j}$ money
 
 We note that the flow network constructed for this problem is very similar to the project selection problem. In future problems, if we are able to convert problems either to generalized project selection or this grid game problem, that means we can attack it using min cuts!
-
-#### [ABC225G](https://atcoder.jp/contests/abc225/tasks/abc225_g)
-
-Using project selection, the projects are that we can save $C$ cost by placing `X` on both machines $(i,j)$ and $(i+1,j+1)$ or on both machines $(i,j)$ and $(i+1,j-1)$. 
-
-So the projects all have cost $C$ and the machine $(i,j)$ have cost $2C-A_{i,j}$ instead. Note that $2C-A_{i,j}$ might be negative, which we can handle by the above discussion about project selection with negative weights.
 
 ### Binary String with Constraints
 
