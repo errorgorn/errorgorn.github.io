@@ -30,15 +30,17 @@ See $[4]$.
 
 See $[5]$, one should understand the constructive algorithm of generating the minimum cut from the residual graph.
 
-In the competitive programming context, it is sometimes helpful to consider graphs where the min-cut provides us with some useful information. Then we run a flow algorithm to compute this min cut. One of the most helpful applications of max-flow min-cut is the project selection problem described in $[6]$.
+We will now discuss some common graph reductions used in the competitive programming context. I have been told by a lot of old people that in the heydays of Topcoder it was flow meta. Those old people will obviously be really good at flow modelling since it was necessary but now I feel like a complete noob at flow compared to them. Unfortunately those heydays are over and flow barely appears in competitive programming. Unfortunately I don't know how to use Topcoder to access their wealth of flow problems...
+
+### Project Selection Problem
+
+The project selection problem described in $[6]$.
 
 One should note that we can allow for negative costs in the project selection. If we have a negative profit project, there is no case where we would to do the project. If we have a negative cost machine, we should always buy the machine. So it is trivially handled with some if cases.
 
 Note that putting negative weights in the flows don't work (negative weights means if $u \to v$ has cost $-c$, then we instead add $v \to u$ with cost $c$). Suppose we have a project with profit of $1$ and a machine with a cost of $-1$ (we get money from buying it). Then our maximum flow is $0$ since there are no edges pointing to the sink. So we would think our maximum profit is $1$ instead of $2$.
 
-I have been told by a lot of old people that in the heydays of Topcoder it was flow meta. Those old people will obviously be really good at flow modelling since it was necessary but now I feel like a complete noob at flow compared to them. Unfortunately those heydays are over and flow barely appears in competitive programming. Since I don't know how to use Topcoder to access their wealth of flow problems these are all the flow problems I know...
-
-- <https://atcoder.jp/contests/arc085/tasks/arc085_c>
+#### [ARC085C](https://atcoder.jp/contests/arc085/tasks/arc085_c)
 
 Using project selection, projects are the negative $a_i$ (we get profit from smashing) and the machines are the positive $a_i$ (we get loss from smashing). Then the dependency is that if project $i$ is smashed, then machine $ik$ must also be smashed.
 
@@ -48,7 +50,7 @@ Take the array $[-1,2,-1,1]$.
 
 If we only take project $1$, then our only constraint is that we must buy machine $2$ and $4$. But I guess this can be fixed by saying that we can always get project $3$ for free.
 
-- <https://atcoder.jp/contests/abc259/tasks/abc259_g>
+####  [ABC259](https://atcoder.jp/contests/abc259/tasks/abc259_g)
 
 We can actually think about this as a sort of generalization of the project selection problem. We can transform the project selection problem into this grid card game as follows.
 
@@ -74,13 +76,15 @@ There $n$ projects with the $i$-th project giving you profit of $p_i = \sum A_{i
 
 We note that the flow network constructed for this problem is very similar to the project selection problem. In future problems, if we are able to convert problems either to generalized project selection or this grid game problem, that means we can attack it using min cuts!
 
-- <https://atcoder.jp/contests/abc225/tasks/abc225_g>
+#### [ABC225G](https://atcoder.jp/contests/abc225/tasks/abc225_g)
 
 Using project selection, the projects are that we can save $C$ cost by placing `X` on both machines $(i,j)$ and $(i+1,j+1)$ or on both machines $(i,j)$ and $(i+1,j-1)$. 
 
 So the projects all have cost $C$ and the machine $(i,j)$ have cost $2C-A_{i,j}$ instead. Note that $2C-A_{i,j}$ might be negative, which we can handle by the above discussion about project selection with negative weights.
 
-The editorial also presents another solution that generally solves the following problem. You need to construct a binary string $S$ of length $n$, the cost of the binary string is defined as followed:
+### Binary String with Constraints
+
+Consider the following problem. You need to construct a binary string $S$ of length $n$, the cost of the binary string is defined as followed:
 
 - If $S_i = \texttt{0}$, you get $A_i$ penalty
 - If $S_i = \texttt{1}$, you get $B_i$ penalty
@@ -96,19 +100,50 @@ Then we construct the following flow graph:
 
 Then our min cut corresponds to the answer to our problem. I was wondering why it is never the case that our min cut cuts both edges $s \to i$ and $i \to t$ for the same $i$. I was stuff thinking about min-cut in terms of the edges that we cut. Instead, we should think of the min-cut in terms of partitioning of the flow graph into $S$ and $T$ where we only take the edges directed from $S \to T$. So from this way, it is clear that we only cut one of $s \to i$ and $i \to t$ depending on whether $i \in T$ or $i \in S$.
 
-Then our original problem transfers in the following way: $S_{(i,j)} = \texttt{0}$ if we do not place $\texttt{X}$ on the tile $(i,j)$. Then $A$ in the defined is the definition we want alongside with $B_{(i,j)}=0$.
+#### [ABC225G](https://atcoder.jp/contests/abc225/tasks/abc225_g) (Again)
+
+Our original problem transfers in the following way: $S_{(i,j)} = \texttt{0}$ if we do not place $\texttt{X}$ on the tile $(i,j)$. Then $A$ in the defined is the definition we want alongside with $B_{(i,j)}=0$.
 
 For convenience, let the grid be expanded for convinience and fill the other tiles with $A = 0$ and $B = \infty$ so that we are forced to not place $\texttt{X}$ on those tiles.
 
 We also have the penalty $C_{(i+1,j+1),(i,j)} = C$ and $C_{(i+1,j-1),(i,j)} = C$.
 
-- <https://atcoder.jp/contests/abc193/tasks/abc193_f>
+#### [ABC193F](https://atcoder.jp/contests/abc193/tasks/abc193_f)
 
 We want to change this problem into one where we are minimising penalty. We will have penalty when two adjacent cells are the same color.
 
 Unfortunately, this does not really correspond with our general condition of "If $S_i = \texttt{0}$ and $S_j = \texttt{1}$, you get $C_{i,j}$ penalty". The trick here is to flip cells $(i,j)$ where $i+j$ has odd parity, then we have have penalty when two adjacent cells are different color.
 
 If we want to force $S_{(i,j)}$ to be $\texttt{0}$, then we set $B_{(i,j)} = \infty$ and if we want to force $S_{(i,j)}$ to be $\texttt{1}$, then we set $A_{(i,j)} = \infty$. Then the penalty on adjacent cells being different color becomes $C_{(i,j),(i \pm 1, j \pm 1)} = 1$. 
+
+#### [ARC142E](https://atcoder.jp/contests/arc142/tasks/arc142_e)
+
+First, an obvious constraint is that for all pairs $(x,y)$, we have $a_x,a_y \geq \min(b_x,b_y)$. Let $mn_i$ denote the minimum value of $a_i$ under this constraint.
+
+Now notice that $a_i$ and $b_i$ are small. For the indices of our binary string above, we can have $S_{(i,v)} = \texttt{1}$ iff $a_i \geq v$.
+
+This is reasonable but now the constraints are of the form $\max(a_x,a_y) \geq \max(b_x,b_y)$. So again, it does not correspond with our general condition of  "If $S_i = \texttt{0}$ and $S_j = \texttt{1}$, you get $C_{i,j}$ penalty". Luckily, we can do the same trick of flipping the meaning of $S$ for some $(i,v)$.
+
+Let $X$ be the set of wizards such that for all pairs $(x,y)$, we have $b_y < b_x$. Let $Y$ be the other wizard. For all wizards in $Y$, we can deduce that $a_i \geq b_i$, since there exists some pair $(x,y)$ such that $b_x \geq b_y$ so that $a_y \geq \min(b_x,b_y) = b_y$.
+
+Now, the extra constraint that $\max(a_x,a_y) \geq \max(b_x,b_y)$ ends up being needed only for pairs where one is in $X$ and the other is in $Y$. There are no pairs that are both in $X$. And all pairs in $Y$ automatically fufil our additional constraint.
+
+Therefore, we can flip the meaning of $S$ for those wizards in $Y$.
+
+Then we can define the variable for our binary string constraint problem:
+
+- If $i \in X$, $S_{(i,v)} = \texttt{1}$ iff $a_i \geq v$
+- If $i \in Y$, $S_{(i,v)} = \texttt{0}$ iff $a_i \geq v$
+
+Now, our constraints are as follows:
+
+- If $i \in X$, then $S_{(i,v)}=\texttt{1}$ implies $S_{(i,v-1)} = \texttt{1}$, so there is a penalty $C_{(i,v-1),(i,v)}=\infty$
+- If $i \in Y$, then $S_{(i,v)}=\texttt{0}$ implies $S_{(i,v-1)} = \texttt{0}$, so there is a penalty $C_{(i,v),(i,v-1)}=\infty$
+- If $i \in X$, then $S_{(i,v)} =\texttt{1}$ will give us a penalty of $B_{(i,v)}=1$ if $v > a_i$
+- If $i \in Y$, then $S_{(i,v)} =\texttt{0}$ will give us a penalty of $A_{(i,v)}=1$ if $v > a_i$
+- If $i \in X$, then $S_{(i,mn_i)}=\texttt{0}$ will give us a penalty of $A_{(i,mn_i)}=\infty$
+- If $i \in Y$, then $S_{(i,mn_i)}=\texttt{1}$ will give us a penalty of $B_{(i,mn_i)}=\infty$
+- Finally if $(x,y) \in (X,Y)$ is a pair, then we have the constraint $\max(a_x,a_y) \geq b_y \iff \neg (a_x<b_y \and a_y < b_y)$ which is represented by $C_{(x,b_y),(y,b_u)} = \infty$.
 
 ### Calculating Max-Flow using Min-Cut
 
