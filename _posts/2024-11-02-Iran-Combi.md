@@ -1,3 +1,7 @@
+---
+tags: math
+---
+
 ## Iranian Combinatorics Olympiad 2024
 
 I competed in this contest with [dantoh](https://codeforces.com/profile/dantoh) and [tqbfjotld](https://codeforces.com/profile/tqbfjotld).
