@@ -34,7 +34,7 @@ I have been told by a lot of old people that in the heydays of Topcoder it was f
 
 Unfortunately those heydays are over and flow barely appears in competitive programming. Unfortunately I don't know how to use Topcoder to access their wealth of flow problems... perhaps there are 120230492384 examples of flow problems in Topcoder but I'm not aware of them.
 
-So first mistake was that when I learnt about minimum cut, I was stuck thinking about optimally choosing a set of edges such that $S$ cannot reach $T$ without these edges. But instead, the more useful way to think about minimum cut is to choose sets $X$ and $Y = V-X$ such that $s \in X$ and $y \in T$ and then deleting all vertices that goes $X \to Y$. And our goal is to optimize the choice of $X$.
+So first mistake was that when I learnt about minimum cut, I was stuck thinking about optimally choosing a set of edges such that $S$ cannot reach $T$ without these edges. But instead, the more useful way to think about minimum cut is to choose sets $X$ and $Y = V-X$ such that $s \in X$ and $y \in T$ and then deleting all edges that goes $X \to Y$. And our goal is to optimize the choice of $X$.
 
 Therefore, minimum cut allows you to solve the following problem, which I hope will feel more familiar to you. You need to construct a binary string $S$ of length $n$, the cost of the binary string is defined as followed:
 
