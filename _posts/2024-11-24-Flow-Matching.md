@@ -36,6 +36,8 @@ Unfortunately those heydays are over and flow barely appears in competitive prog
 
 So first mistake was that when I learnt about minimum cut, I was stuck thinking about optimally choosing a set of edges such that $S$ cannot reach $T$ without these edges. But instead, the more useful way to think about minimum cut is to choose sets $X$ and $Y = V-X$ such that $s \in X$ and $y \in T$ and then deleting all edges that goes $X \to Y$. And our goal is to optimize the choice of $X$.
 
+The point is that we should not focus on the set of edges itself. Instead, focus on the partition $X$ and $Y$ that induces those edges.
+
 Therefore, minimum cut allows you to solve the following problem, which I hope will feel more familiar to you. You need to construct a binary string $S$ of length $n$, the cost of the binary string is defined as followed:
 
 - If $S_i = \texttt{1}$, you get $A_i$ penalty
