@@ -46,7 +46,7 @@ Case 2: $\chi(H) + \chi(\overline H) = n$, notice that we only need to choose a 
 
 ### Upper Bound (Proof 3)
 
-This proof was given by Anton Trygub. It is the only non-constructive proof out of the 3, but it is extremely genius.
+This proof was given by Anton Trygub. I think it is the best proof.
 
 Lemma 2: If $\chi(G) \geq c$, then we can find an induced subgraph $H \subseteq G$ such that $\min \deg(H) \geq c-1$.
 
@@ -55,3 +55,6 @@ Proof of Lemma 2: We will prove the contrapositive. Suppose for all induced subg
 Now, suppose that there is a certificate for the fact that $\chi(G) \geq k+1$ and $\chi(\overline G) \geq n-k+1$ for some $k$. The graph $H_1 \subseteq G$ with $\min \deg_G (H_1) \geq k$ has at least size $k+1$. Similarly, the graph $H_2 \subseteq \overline G$ with $\min \deg_{\overline G} (H_2) \geq n-k$ has at least size $n-k+1$.
 
 Therefore, there is a vertex $v$ that is in $H_1 \cap H_2$. This vertex has degree at least $k$ in $G$ and degree at least $n-k$ in $\overline G$. So the total degree of $v$ is at least $n$. Contradiction.
+
+Now, it seems as though this proof is non-constructive but we can easily make it constructive. For $G$ and $\overline G$ we will run our algorithm in lemma 2 to find a greedy coloring by repeatedly deleting the vertex with the minimum degree. Then we have just proved that if this strategy produces a coloring that uses too many colors, we have a contradiction.
+

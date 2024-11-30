@@ -28,7 +28,7 @@ See $[4]$.
 
 ### Max-Flow Min-Cut Duality
 
-See $[5]$, one should understand the constructive algorithm of generating the minimum cut from the residual graph.
+​	See $[5]$, one should understand the constructive algorithm of generating the minimum cut from the residual graph.
 
 I have been told by a lot of old people that in the heydays of Topcoder it was flow meta. Those old people will obviously be really good at flow modelling since it was necessary but now I feel like a complete noob at flow compared to them. During OCPC I just watched mhq do flow problems and all I could do was 👁️👄👁️👍
 
@@ -40,19 +40,23 @@ The point is that we should not focus on the set of edges itself. Instead, focus
 
 Therefore, minimum cut allows you to solve the following problem, which I hope will feel more familiar to you. You need to construct a binary string $S$ of length $n$, the cost of the binary string is defined as followed:
 
-- If $S_i = \texttt{1}$, you get $A_i$ penalty
-- If $S_i = \texttt{0}$, you get $B_i$ penalty
+- If $S_i = \texttt{0}$, you get $A_i$ penalty
+- If $S_i = \texttt{1}$, you get $B_i$ penalty
 - If $S_i = \texttt{1}$ and $S_j = \texttt{0}$, you get $C_{i,j}$ penalty
 
-Then we construct the following flow graph:
+So basically $i \in X$ has $S_i = \texttt{1}$ and $i \in Y$ has $S_i = \texttt{0}$. Then we construct the following flow graph:
 
 - $s \to i$ with cost $A_i$
-- $i \to j$ with cost $C_{i,j}$
 - $i \to t$ with cost $B_i$
+- $i \to j$ with cost $C_{i,j}$
 
-Then our min cut corresponds to the answer to our problem.
+Then our min cut corresponds to the answer to our problem. For some reason, my brain finds this easier to work with than thinking about $X$ and $Y$...
 
-Here, I want to stress that we cannot put neagtive weights into a flow graph and expect the graph to spit out the correct answer. So we must have that $A,B,C$ are all positive. However, we can freely add a constant to both $A_i$ and $B_i$ as long as we subtract it later. So we can transform the problem to one where $A_i$ and $B_i$ are positive. But unfortunately, we need to force that our problem has $C_{i,j}$ being positive as I don't know how to handle it when it is negative.
+In the above formula, I have assumed that all of $A,B,C$ are non-negative. We cannot put neagtive weights into a flow graph and expect the graph to spit out the correct answer.
+
+So what should we do if some of $A,B,C$ are negative? Notice that we can add a constant $M$ to both $A_i$ and $B_i$ as long as we subtract $M$ from our answer later. So we can transform the problem to one where $A_i$ and $B_i$ are non-negative. Unfortunately, we need to force a constraint on $C_{i,j}$ being non-negative as I don't know how to handle it when it is negative.
+
+We can write all flow networks in our binary string formulation and that we can write all binary string formulations as flow networks as long as $C_{i,j} \geq 0$. So we will forget that we are even working with flow networks and formulate our problem entirely using this binary string formulation. It is like when solving problems in 2-SAT. You do not need to care that we are attacking it with SCCs to transform the problem into one about 2-SAT. Same thing here.
 
 #### Project Selection Problem
 
@@ -112,18 +116,18 @@ Then the costs are as follows:
 
 Sometimes, the "natural" constraints are of the form:
 
-- If $S_i = \texttt{1}$, you get $A_i$ penalty
-- If $S_i = \texttt{0}$, you get $B_i$ penalty
+- If $S_i = \texttt{0}$, you get $A_i$ penalty
+- If $S_i = \texttt{1}$, you get $B_i$ penalty
 - If $S_i = \texttt{1}$ and $S_j = \texttt{1}$, you get $C_{i,j}$ penalty (**PAY ATTENTION**: we have $S_j = \texttt{1}$ of $S_j = \texttt{0}$)
 
 How we will convert them into the format that we need to min-cut is that realize that we can split the indices into sets $X$ and $Y=V-X$ such that constraints of type $C$ span $(X,Y)$. That is, if $C_{i,j} \neq 0$, then we have $i \in X$ and $j \in Y$.
 
 Then to convert this into something we can handle with minimum cut, we can "flip" everyone in $Y$. Specifically:
 
-- If $S_i =\texttt{1}$ and $i \in X$, you get $A_i$ penalty
-- If $S_i = \texttt{0}$ and $i \in X$, you get $B_i$ penalty
-- If $S_i =\texttt{0}$ and $i \in Y$, you get $A_i$ penalty
-- If $S_i =\texttt{1}$ and $i \in Y$, you get $B_i$ penalty
+- If $S_i =\texttt{0}$ and $i \in X$, you get $A_i$ penalty
+- If $S_i = \texttt{1}$ and $i \in X$, you get $B_i$ penalty
+- If $S_i =\texttt{1}$ and $i \in Y$, you get $A_i$ penalty
+- If $S_i =\texttt{0}$ and $i \in Y$, you get $B_i$ penalty
 - If $S_i = \texttt{1}$ and $S_j = \texttt{0}$ and $i \in X$ and $j \in Y$, you get $C_{i,j}$ penalty
 
 In the below problems, we will work with the "natural" formulation of the problem and leave it to the reader to turn it into the proper min-cut version.
