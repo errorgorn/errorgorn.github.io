@@ -26,7 +26,7 @@ Let there be $k$ components in our above partition into empty graphs. Then we ca
 
 Start with $\{U_j\}$ being the singleton sets. For each $i=2$ to $k$, we will pick an arbitrary vertex $v \in V_i$ and then merge it with some other component in $\{U_i\}$ that is entirely in $V_1 \cup V_2 \cup \ldots \cup V_{i-1}$.
 
-Consider the components of $\{U_j\}$ inside $V_1 \cup V_2 \cup \ldots \cup V_{i-1}$. It is easy to see that $\sum\limits (|U_j|-1) = i-2$. Therefore, since $v$ has at least $i-1$ vertices to $V_1 \cup V_2 \cup \ldots \cup V_{i-1}$ (at least one to each component), there exists a component of $\{U_j\}$ where all the vertices are connected to $v$. So we merge $v$ with that component.
+Consider the components of $\{U_j\}$ inside $V_1 \cup V_2 \cup \ldots \cup V_{i-1}$. It is easy to see that $\sum\limits (\mid U_j \mid -1) = i-2$. Therefore, since $v$ has at least $i-1$ vertices to $V_1 \cup V_2 \cup \ldots \cup V_{i-1}$ (at least one to each component), there exists a component of $\{U_j\}$ where all the vertices are connected to $v$. So we merge $v$ with that component.
 
 ### Upper Bound (Proof 2)
 
