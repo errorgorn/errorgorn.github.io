@@ -75,3 +75,5 @@ Otherwise, the path ends in one of $y_{i+1},y_{i+2}, \ldots, y_k$. Since $x_{i+1
 Therefore, we have two different but probably very similar ways of proving our claim.
 
 These last two optimizations are used in [CF1728F](https://codeforces.com/problemset/problem/1728/F), if you want to solve that.
+
+**EDIT:** Patrik Pavic told me that you can prove this easily since the sets of valid $x$ forms a matroid...
