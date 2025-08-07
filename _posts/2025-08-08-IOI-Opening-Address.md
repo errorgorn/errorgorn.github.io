@@ -6,7 +6,6 @@ Source: <https://www.facebook.com/MinPlanificaOficial/videos/1871373346740810/>
 
 ### Raw Speech
 
-```
 Dear President, dear (inaudible), distinguished guests, team leader, contestant and our generous host Bolivia,
 
 Good afternoon and a very well... warm welcome to the Inder-International Olympiads of Informatics... 2025 in this beautiful city of Sucre, Bolivia.
@@ -24,11 +23,9 @@ Beyond this, we will soon propose a series of new initiative aimed at expanding 
 On behalf of IOI, I thank the organizing teams in Bolivia once again for their immerse effort and dedication. I ask all of you to give them your full support so that we may have a successful, memorable and unifying IOI in the next few days. Thank you and may IOI be a beacon of renewal and hope for all of us.
 
 Thank you.
-```
 
 ### Cleaned Speech
 
-```
 Dear President, dear (inaudible), distinguished guests, team leaders, contestants and our generous host Bolivia,
 
 Good afternoon and a very warm welcome to the International Olympiad in Informatics 2025 in this beautiful city of Sucre, Bolivia.
@@ -46,11 +43,9 @@ Beyond this, we will soon propose a series of new initiatives aimed at expanding
 On behalf of IOI, I thank the organizing teams in Bolivia once again for their immense effort and dedication. I ask all of you to give them your full support so that we may have a successful, memorable and unifying IOI in the next few days. Thank you and may IOI be a beacon of renewal and hope for all of us.
 
 Thank you.
-```
 
 ### Diff
 
-```
 Dear President, dear (inaudible), distinguished guests, team leader[s], contestant[s] and our generous host Bolivia,
 
 Good afternoon and a very {well... }warm welcome to the {Inder-}International Olympiad{s of}[ in] Informatics{...} 2025 in this beautiful city of Sucre, Bolivia.
@@ -68,5 +63,4 @@ Beyond this, we will soon propose a series of new initiative[s] aimed at expandi
 On behalf of IOI, I thank the organizing teams in Bolivia once again for their {immerse}[immense] effort and dedication. I ask all of you to give them your full support so that we may have a successful, memorable and unifying IOI in the next few days. Thank you and may IOI be a beacon of renewal and hope for all of us.
 
 Thank you.
-```
 
