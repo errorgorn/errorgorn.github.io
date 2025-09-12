@@ -1,3 +1,7 @@
+---
+tags: cp
+---
+
 ## IOI 2025 Opening Address Transcription
 
 In case someone wants to quote the opening address, feel free to quote this blog.
