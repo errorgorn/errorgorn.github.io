@@ -1,5 +1,5 @@
 ---
-tags: cp
+tags: CP
 ---
 
 ## Some Speedups for Matching Algorithms

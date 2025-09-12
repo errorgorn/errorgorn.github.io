@@ -1,5 +1,5 @@
 ---
-tags: notes cp math
+tags: notes CP math
 ---
 
 ## A Collection of Flow and Matching Results from Scratch

@@ -1,5 +1,5 @@
 ---
-tags: cp
+tags: CP
 ---
 
 ## IOI 2025 Opening Address Transcription
